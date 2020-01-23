@@ -6,7 +6,7 @@
 // @import 'section';
 // @import 'footer';
 
-// * BODY
+// * BODY / GLOBAL
 
 body {
 	font-size: 16px;
@@ -17,6 +17,16 @@ a {
 	text-decoration: none;
 	&:hover {
 		text-decoration: underline;
+	}
+}
+
+p {
+	line-height: 1.5;
+}
+
+@include tabletLandscape {
+	p {
+		font-size: 1.5rem;
 	}
 }
 
@@ -37,9 +47,16 @@ nav {
 	}
 }
 
+@include tabletLandscape {
+	nav {
+		padding: 1rem 2rem;
+	}
+}
+
 .navlinks,
 .social-links {
 	display: flex;
+	align-items: center;
 	li {
 		margin: 0 1rem;
 		a {
@@ -51,15 +68,30 @@ nav {
 	}
 }
 
+//decide whether or not to use position absolute for .social-links
+// ! opacity transition lagging on resize
+
 .social-links {
+	// position: absolute;
+	// top: .75rem;
+	// right: .75rem;
+	// transition: opacity .7s;
 	display: none;
 }
 
-@include tabletPortrait {
+@include mobileLandscape {
 	.social-links {
+		// opacity: 1;
+		// transform: translateZ(0);
 		display: flex;
 	}
 }
+
+// @include tabletLandscape {
+// 	.social-links {
+// 		right: 1.5rem;
+// 	}
+// }
 
 .social-logo-svg {
 	width: 24px;
@@ -79,13 +111,17 @@ nav {
 header {
 	display: flex;
 	flex-direction: column;
-	// border: 1px solid var(--outline);
 	height: 100vh;
 	text-align: center;
 	padding: 25% 2rem 0;
-	// background-color: var(--header);
 	background-image: var(--headergrad);
 	color: var(--outline);
+}
+
+@include tabletPortrait {
+	header {
+		padding: 20% 2rem 0;
+	}
 }
 
 .selfie {
@@ -93,30 +129,27 @@ header {
 }
 
 .name-header {
-	font-size: 32px;
+	font-size: 2rem;
 	margin-bottom: 1.5rem;
 	text-transform: uppercase;
 }
 
 @include mobileLandscape {
 	.name-header {
-		font-size: 40px;
+		font-size: 2.5rem;
+	}
+}
+
+@include tabletLandscape {
+	.name-header {
+		font-size: 3rem;
 	}
 }
 
 @include laptop {
 	.name-header {
-		font-size: 48px;
-	}
-}
-
-.intro-text {
-	line-height: 1.3;
-}
-
-@include tabletLandscape {
-	.intro-text {
-		font-size: 20px;
+		font-size: 4rem;
+		margin-bottom: 2rem;
 	}
 }
 
@@ -130,12 +163,18 @@ section {
 }
 
 h2 {
-	font-size: 2rem;
+	font-size: 3rem;
 }
 
 @include mobileLandscape {
 	h2 {
 		font-size: 4rem;
+	}
+}
+
+@include tabletLandscape {
+	h2 {
+		font-size: 6rem;
 	}
 }
 
@@ -146,23 +185,17 @@ h2 {
 }
 
 h3 {
-	font-size: 24px;
+	font-size: 1.5rem;
 }
 
 @include mobileLandscape {
 	h3 {
-		font-size: 40px;
-	}
-}
-
-@include laptop {
-	h3 {
-		font-size: 48px;
+		font-size: 2.5rem;
 	}
 }
 
 .section-wrap {
-	padding: 0 4rem;
+	padding: 0 2rem;
 }
 
 .projects {
@@ -170,7 +203,7 @@ h3 {
 }
 
 .project-header {
-	margin: 25% auto;
+	margin: 25% auto 0;
 	padding: 25% 0 40%;
 	font-weight: 600;
 	text-transform: uppercase;
@@ -193,106 +226,44 @@ h3 {
 	}
 }
 
+// * ABOUT
+
+.about {
+	display: block;
+	padding: 6rem 0 4rem;
+	text-align: center;
+	height: 100%;
+}
+
+.about-title {
+	margin: 2rem auto 3rem;
+}
+
+.about-text {
+	display: block;
+	width: 70%;
+	margin: 0 auto 2rem;
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
+
+@include tabletLandscape {
+	.about-title {
+		margin: 2rem auto 4rem;
+	}
+
+	.about-text {
+		font-size: 1.25rem;
+		line-height: 2rem;
+		width: 60%;
+	}
+}
+
 // * FOOTER
 
 footer {
 	@include flexCenter();
 	padding: 4rem 2rem 4rem;
+	background-color: var(--nav);
+	color: white;
 }
-
-// :root {
-// 	--gradient: linear-gradient(45deg, #ffefe8, #ffe6d1, #fcead6);
-// 	--outline: #222;
-// 	--hover: #5121fe;
-// }
-
-// @keyframes bg-animation {
-// 	0% {
-// 		background-position: left;
-// 	}
-// 	50% {
-// 		background-position: right;
-// 	}
-// 	100% {
-// 		background-position: left;
-// 	}
-// }
-
-// body {
-// 	background-color: #fffaeb;
-// 	font-family: 'Poppins', sans-serif;
-// 	font-size: 16px;
-// 	line-height: 2;
-// 	color: var(--outline);
-// 	display: flex;
-// 	justify-content: center;
-// 	background-size: 300%;
-// 	background-image: var(--gradient);
-// 	animation: bg-animation 20s infinite;
-// 	padding: 2rem;
-// }
-
-// h1 {
-// 	font-weight: 600;
-// 	font-size: 32px;
-// 	letter-spacing: 3px;
-// 	text-transform: uppercase;
-// 	transition: color .2s;
-// 	text-align: center;
-// }
-
-// .container {
-// 	width: 1400px;
-// 	height: 100vh;
-// 	margin: 0 auto;
-// 	position: relative;
-// 	top: 0;
-// 	left: 0;
-// }
-
-// .headerwrapper {
-// 	display: flex;
-// 	justify-content: space-between;
-// 	align-items: center;
-// }
-
-// .navwrapper {
-// 	margin-bottom: .5rem;
-// }
-
-// .headerlinks {
-// 	display: flex;
-// 	justify-content: space-between;
-// }
-
-// .headerlinks a {
-// 	margin-right: 1rem;
-// }
-
-// h1:hover {
-// 	color: var(--hover);
-// 	cursor: pointer;
-// }
-
-// a {
-// 	color: var(--outline);
-// 	transition: color 0.2s;
-// 	// text-decoration: none;
-// 	font-weight: 600;
-// }
-
-// a:hover {
-// 	color: var(--hover);
-// 	cursor: pointer;
-// }
-
-// .paulbaisleyaccent {
-// 	font-weight: 600;
-// 	font-size: 32px;
-// 	text-transform: uppercase;
-// }
-
-// .introtext {
-// 	text-align: left;
-// 	margin-bottom: 1rem;
-// }
