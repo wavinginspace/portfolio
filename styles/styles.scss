@@ -1,0 +1,298 @@
+@import 'mixins';
+@import 'variables';
+@import 'breakpoints';
+// @import 'nav';
+// @import 'header';
+// @import 'section';
+// @import 'footer';
+
+// * BODY
+
+body {
+	font-size: 16px;
+	font-family: 'Source Code Pro', monospace;
+}
+
+a {
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+// * NAV
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 50px;
+	border-bottom: 2px solid var(--outline);
+	background-color: var(--nav);
+	font-weight: 500;
+	padding: 1rem;
+	transition: background-color .2s;
+	&:hover {
+		// background-color: var(--light);
+	}
+}
+
+.navlinks,
+.social-links {
+	display: flex;
+	li {
+		margin: 0 1rem;
+		a {
+			color: var(--outline);
+			&:hover {
+				color: var(--light);
+			}
+		}
+	}
+}
+
+.social-links {
+	display: none;
+}
+
+@include tabletPortrait {
+	.social-links {
+		display: flex;
+	}
+}
+
+.social-logo {
+	transition: transform .2s;
+	&:hover {
+		fill: var(--light);
+	}
+}
+
+.social-logo:hover {
+	transform: translateZ(0) scale(1.1, 1.1);
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: translateZ(0) scale(1.1, 1.1);
+}
+
+// * HEADER
+
+header {
+	display: flex;
+	flex-direction: column;
+	// border: 1px solid var(--outline);
+	height: 100vh;
+	text-align: center;
+	padding: 25% 2rem 0;
+	// background-color: var(--header);
+	background-image: var(--headergrad);
+	color: var(--outline);
+}
+
+.selfie {
+	margin: 0 auto 2rem;
+}
+
+.name-header {
+	font-size: 32px;
+	margin-bottom: 1.5rem;
+	text-transform: uppercase;
+}
+
+@include mobileLandscape {
+	.name-header {
+		font-size: 40px;
+	}
+}
+
+@include laptop {
+	.name-header {
+		font-size: 48px;
+	}
+}
+
+.intro-text {
+	line-height: 1.3;
+}
+
+@include tabletLandscape {
+	.intro-text {
+		font-size: 20px;
+	}
+}
+
+// * SECTION
+
+section {
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+	// border: 1px solid green;
+}
+
+h2 {
+	font-size: 2rem;
+}
+
+@include mobileLandscape {
+	h2 {
+		font-size: 4rem;
+	}
+}
+
+@include laptop {
+	h2 {
+		font-size: 8rem;
+	}
+}
+
+h3 {
+	font-size: 24px;
+}
+
+@include mobileLandscape {
+	h3 {
+		font-size: 40px;
+	}
+}
+
+@include laptop {
+	h3 {
+		font-size: 48px;
+	}
+}
+
+.section-wrap {
+	padding: 0 4rem;
+}
+
+.projects {
+	display: flex;
+}
+
+.project-header {
+	margin: 25% auto;
+	padding: 25% 0 40%;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: var(--headerog);
+}
+
+.project-header-section {
+	height: 100vh;
+	@include flexCenter();
+}
+
+.projects {
+	border: 2px solid var(--outline);
+}
+
+@include tabletLandscape {
+	.projects {
+		@include flexCenter();
+	}
+}
+
+// * FOOTER
+
+footer {
+	@include flexCenter();
+	padding: 4rem 2rem 4rem;
+}
+
+// :root {
+// 	--gradient: linear-gradient(45deg, #ffefe8, #ffe6d1, #fcead6);
+// 	--outline: #222;
+// 	--hover: #5121fe;
+// }
+
+// @keyframes bg-animation {
+// 	0% {
+// 		background-position: left;
+// 	}
+// 	50% {
+// 		background-position: right;
+// 	}
+// 	100% {
+// 		background-position: left;
+// 	}
+// }
+
+// body {
+// 	background-color: #fffaeb;
+// 	font-family: 'Poppins', sans-serif;
+// 	font-size: 16px;
+// 	line-height: 2;
+// 	color: var(--outline);
+// 	display: flex;
+// 	justify-content: center;
+// 	background-size: 300%;
+// 	background-image: var(--gradient);
+// 	animation: bg-animation 20s infinite;
+// 	padding: 2rem;
+// }
+
+// h1 {
+// 	font-weight: 600;
+// 	font-size: 32px;
+// 	letter-spacing: 3px;
+// 	text-transform: uppercase;
+// 	transition: color .2s;
+// 	text-align: center;
+// }
+
+// .container {
+// 	width: 1400px;
+// 	height: 100vh;
+// 	margin: 0 auto;
+// 	position: relative;
+// 	top: 0;
+// 	left: 0;
+// }
+
+// .headerwrapper {
+// 	display: flex;
+// 	justify-content: space-between;
+// 	align-items: center;
+// }
+
+// .navwrapper {
+// 	margin-bottom: .5rem;
+// }
+
+// .headerlinks {
+// 	display: flex;
+// 	justify-content: space-between;
+// }
+
+// .headerlinks a {
+// 	margin-right: 1rem;
+// }
+
+// h1:hover {
+// 	color: var(--hover);
+// 	cursor: pointer;
+// }
+
+// a {
+// 	color: var(--outline);
+// 	transition: color 0.2s;
+// 	// text-decoration: none;
+// 	font-weight: 600;
+// }
+
+// a:hover {
+// 	color: var(--hover);
+// 	cursor: pointer;
+// }
+
+// .paulbaisleyaccent {
+// 	font-weight: 600;
+// 	font-size: 32px;
+// 	text-transform: uppercase;
+// }
+
+// .introtext {
+// 	text-align: left;
+// 	margin-bottom: 1rem;
+// }
