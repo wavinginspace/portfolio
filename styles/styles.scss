@@ -61,17 +61,17 @@ nav {
 	}
 }
 
-.social-logo {
-	transition: transform .2s;
-	&:hover {
-		fill: var(--light);
-	}
+.social-logo-svg {
+	width: 24px;
+	height: 24px;
+	fill: var(--outline);
+	transition: all .2s;
 }
 
-.social-logo:hover {
-	transform: translateZ(0) scale(1.1, 1.1);
-	-webkit-backface-visibility: hidden;
-	-webkit-transform: translateZ(0) scale(1.1, 1.1);
+.social-logo-svg:hover {
+	fill: var(--light);
+	transform: scale(1.1);
+	transform-origin: 50% 50%;
 }
 
 // * HEADER
