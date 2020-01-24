@@ -158,7 +158,7 @@ header {
 section {
 	display: flex;
 	justify-content: center;
-	height: 100vh;
+	height: 100%;
 	// border: 1px solid green;
 }
 
@@ -195,20 +195,92 @@ h3 {
 }
 
 .section-wrap {
-	padding: 0 2rem;
+	// padding: 0 2rem;
 }
 
 .projects {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+	// border-top: 2px solid var(--outline);
+
+	// grid-template-rows: 1fr 1fr;
+	// grid-template-areas: "title image" "desc tech";
+	img {
+		// border-width: 2px 2px 2px 0;
+		// border: solid var(--nav);
+
+		// box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+.project-2 {
+	grid-auto-flow: dense;
+}
+
+.project-title-box {
+	// grid-area: title;
 	display: flex;
+	flex-direction: column;
+	padding: 10% 2rem 0;
+	text-align: center;
+}
+
+.project-title {
+	font-size: 2rem;
+	margin: 5% auto 4rem;
+}
+
+@include tabletPortrait {
+	.project-title {
+		font-size: 4rem;
+	}
+}
+
+.project-desc-text,
+.project-tech-text {
+	margin: 0 auto 3rem;
+	font-size: 1rem;
+	width: 85%;
+}
+
+@include mobileLandscape {
+	.project-desc-text,
+	.project-tech-text {
+		font-size: 1.25rem;
+	}
+}
+
+.project-image-box {
+	// grid-area: image;
+	img {
+		width: 100%;
+	}
+}
+
+.link-wrap {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	font-size: 1.5rem;
+	font-weight: 500;
+	margin-bottom: 3rem;
+}
+
+.project-link {
+	margin: 0 5%;
 }
 
 .project-header {
-	margin: 25% auto 0;
-	padding: 25% 0 40%;
+	margin: 0 auto 200px;
+	@include flexCenter();
 	font-weight: 600;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	color: var(--headerog);
+	height: 100vh;
 }
 
 .project-header-section {
@@ -216,15 +288,11 @@ h3 {
 	@include flexCenter();
 }
 
-.projects {
-	border: 2px solid var(--outline);
-}
-
-@include tabletLandscape {
-	.projects {
-		@include flexCenter();
-	}
-}
+// @include tabletLandscape {
+// 	.projects {
+// 		@include flexCenter();
+// 	}
+// }
 
 // * ABOUT
 
@@ -233,6 +301,8 @@ h3 {
 	padding: 6rem 0 4rem;
 	text-align: center;
 	height: 100%;
+	// background-image: linear-gradient(0deg, var(--nav), white);
+	padding-bottom: 6rem;
 }
 
 .about-title {
