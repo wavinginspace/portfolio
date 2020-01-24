@@ -63,12 +63,13 @@ nav {
 
 @media (min-width: 1024px) {
   nav {
-    padding: 1.5rem 1.5rem;
+    padding: 1.5rem;
   }
 }
 
 .navlinks,
-.social-links {
+.social-links,
+.mobile-social-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -78,19 +79,22 @@ nav {
 }
 
 .navlinks li,
-.social-links li {
+.social-links li,
+.mobile-social-links li {
   margin: 0 .5rem;
 }
 
 .navlinks li a,
-.social-links li a {
+.social-links li a,
+.mobile-social-links li a {
   color: var(--outline);
   -webkit-transition: color .2s;
   transition: color .2s;
 }
 
 .navlinks li a:hover,
-.social-links li a:hover {
+.social-links li a:hover,
+.mobile-social-links li a:hover {
   color: var(--light);
 }
 
@@ -127,6 +131,37 @@ nav {
           transform: scale(1.1);
   -webkit-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
+}
+
+.mobile-menu {
+  top: -50px;
+  left: 0;
+  position: absolute;
+  height: 50px;
+  background-color: var(--outline);
+  width: 100%;
+  padding: 1rem;
+  -webkit-transition: -webkit-transform .5s ease-out;
+  transition: -webkit-transform .5s ease-out;
+  transition: transform .5s ease-out;
+  transition: transform .5s ease-out, -webkit-transform .5s ease-out;
+}
+
+.social-logo-svg.mobile {
+  position: relative;
+  display: inline-block;
+  margin-top: -4px;
+  margin-right: 1rem;
+  fill: var(--light);
+}
+
+.social-logo-svg.mobile:hover {
+  fill: white;
+}
+
+.open {
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
 }
 
 header {
@@ -581,24 +616,31 @@ footer {
   }
 }
 
-.hamburger {
+#burger-svg {
   width: 23px;
   height: 23px;
   position: absolute;
   top: .75rem;
   right: 1.4rem;
-  fill: var(--outline);
   -webkit-transition: fill .2s;
   transition: fill .2s;
 }
 
-.hamburger:hover {
+#burger-svg:hover {
   cursor: pointer;
   fill: var(--light);
 }
 
+.burger-closed {
+  fill: var(--outline);
+}
+
+.burger-open {
+  fill: var(--light);
+}
+
 @media (min-width: 640px) {
-  .hamburger {
+  .hamburger-closed {
     display: none;
   }
 }
