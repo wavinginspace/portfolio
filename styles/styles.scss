@@ -1,6 +1,7 @@
 @import 'mixins';
 @import 'variables';
 @import 'breakpoints';
+@import 'wave';
 // @import 'nav';
 // @import 'header';
 // @import 'section';
@@ -49,7 +50,7 @@ nav {
 
 @include tabletLandscape {
 	nav {
-		padding: 1rem 2rem;
+		padding: 1.5rem 1.5rem;
 	}
 }
 
@@ -58,12 +59,22 @@ nav {
 	display: flex;
 	align-items: center;
 	li {
-		margin: 0 1rem;
+		margin: 0 .5rem;
 		a {
 			color: var(--outline);
+			transition: color .2s;
 			&:hover {
 				color: var(--light);
 			}
+		}
+	}
+}
+
+@include mobileLandscape {
+	.navlinks,
+	.social-links {
+		li {
+			margin: 0 1rem;
 		}
 	}
 }
@@ -159,6 +170,7 @@ section {
 	display: flex;
 	justify-content: center;
 	height: 100%;
+	width: 100%;
 	// border: 1px solid green;
 }
 
@@ -194,22 +206,19 @@ h3 {
 	}
 }
 
-.section-wrap {
-	// padding: 0 2rem;
-}
+// .section-wrap {
+// 	padding: 0 2rem;
+// }
 
 .projects {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-	// border-top: 2px solid var(--outline);
-
-	// grid-template-rows: 1fr 1fr;
-	// grid-template-areas: "title image" "desc tech";
+	grid-template-columns: repeat(auto-fit, minmax(600px, 2fr));
+	padding: 2rem;
+	// border-bottom: 5px solid var(--headerog);
 	img {
-		// border-width: 2px 2px 2px 0;
-		// border: solid var(--nav);
-
-		// box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+		min-width: 50%;
+		box-shadow: 5px 10px 10px 10px rgba(0, 0, 0, .03);
+		border: solid var(--nav);
 		&:hover {
 			cursor: pointer;
 		}
@@ -220,17 +229,29 @@ h3 {
 	grid-auto-flow: dense;
 }
 
-.project-title-box {
-	// grid-area: title;
+.project-info-box {
 	display: flex;
 	flex-direction: column;
-	padding: 10% 2rem 0;
+	padding: 2rem;
 	text-align: center;
+	justify-content: center;
+	align-items: center;
+}
+
+.project-image-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 0 2rem;
+	img {
+		max-width: 50%;
+	}
 }
 
 .project-title {
-	font-size: 2rem;
-	margin: 5% auto 4rem;
+	font-size: 1.5rem;
+	margin: 0 auto 3rem;
 }
 
 @include tabletPortrait {
@@ -241,9 +262,17 @@ h3 {
 
 .project-desc-text,
 .project-tech-text {
-	margin: 0 auto 3rem;
-	font-size: 1rem;
-	width: 85%;
+	font-size: .9rem;
+	width: 50%;
+}
+
+.project-desc-text {
+	margin: 0 auto 2rem;
+}
+
+.project-tech-text {
+	margin: 0 auto;
+	text-align: center;
 }
 
 @include mobileLandscape {
@@ -253,28 +282,23 @@ h3 {
 	}
 }
 
-.project-image-box {
-	// grid-area: image;
-	img {
-		width: 100%;
-	}
-}
-
 .link-wrap {
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: space-between;
+	align-items: center;
 	font-size: 1.5rem;
 	font-weight: 500;
-	margin-bottom: 3rem;
+	margin-bottom: 1rem;
 }
 
 .project-link {
-	margin: 0 5%;
+	margin: 1rem 2rem;
+	font-size: 1rem;
 }
 
 .project-header {
-	margin: 0 auto 200px;
+	margin: 0 auto;
 	@include flexCenter();
 	font-weight: 600;
 	text-transform: uppercase;
@@ -298,11 +322,11 @@ h3 {
 
 .about {
 	display: block;
-	padding: 6rem 0 4rem;
+	padding: 3rem 0 4rem;
 	text-align: center;
 	height: 100%;
 	// background-image: linear-gradient(0deg, var(--nav), white);
-	padding-bottom: 6rem;
+	padding-bottom: 0;
 }
 
 .about-title {
@@ -313,8 +337,8 @@ h3 {
 	display: block;
 	width: 70%;
 	margin: 0 auto 2rem;
-	font-size: 1rem;
-	line-height: 1.5rem;
+	font-size: .9rem;
+	line-height: 1.3rem;
 }
 
 @include tabletLandscape {
@@ -332,8 +356,8 @@ h3 {
 // * FOOTER
 
 footer {
-	@include flexCenter();
-	padding: 4rem 2rem 4rem;
-	background-color: var(--nav);
-	color: white;
+	// @include flexCenter();
+	// padding: 4rem 2rem 4rem;
+	// background-color: var(--nav);
+	height: 200px;
 }

@@ -54,7 +54,7 @@
         </header>
 
           <!-- SVG WAVE -->
-        <div class="wave">
+        <div class="melt">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FF7676" fill-opacity="1" d="M0,192L17.1,202.7C34.3,213,69,235,103,218.7C137.1,203,171,149,206,154.7C240,160,274,224,309,224C342.9,224,377,160,411,133.3C445.7,107,480,117,514,149.3C548.6,181,583,235,617,229.3C651.4,224,686,160,720,117.3C754.3,75,789,53,823,48C857.1,43,891,53,926,85.3C960,117,994,171,1029,202.7C1062.9,235,1097,245,1131,218.7C1165.7,192,1200,128,1234,106.7C1268.6,85,1303,107,1337,128C1371.4,149,1406,171,1423,181.3L1440,192L1440,0L1422.9,0C1405.7,0,1371,0,1337,0C1302.9,0,1269,0,1234,0C1200,0,1166,0,1131,0C1097.1,0,1063,0,1029,0C994.3,0,960,0,926,0C891.4,0,857,0,823,0C788.6,0,754,0,720,0C685.7,0,651,0,617,0C582.9,0,549,0,514,0C480,0,446,0,411,0C377.1,0,343,0,309,0C274.3,0,240,0,206,0C171.4,0,137,0,103,0C68.6,0,34,0,17,0L0,0Z"></path></svg>
       </div>
 
@@ -68,23 +68,25 @@
 
         <section class="projects project-1">
 
-          <div class="project-title-box">
+          <div class="project-info-box">
 
             <h3 class="project-title">Bookmarks App</h3>
             <p class="project-desc-text">A single-page application built with jQuery, leveraging a RESTful API. Allows user to bookmark websites, add and edit a description and rating, and filter by rating. Renders HTML dynamically based on state, a la React.</p>
-
-            <div class="link-wrap">
-              <a class="project-link" href="">live demo</a> 
-              <a class="project-link" href="">repo</a>
-            </div>
-            
-            <p class="project-tech-text">Technologies used: HTML5, CSS, Javascript, jQuery</p>
             <div class="tech-icons"></div>
 
           </div>
 
           <div class="project-image-box">
-            <img src="./images/screencaps/bookmarks1.png" alt="">
+
+            <img src="./images/screencaps/bookmarks1.png" alt="bookmarks app screencap">
+
+            <div class="link-wrap">
+              <a class="project-link" href="">demo</a> 
+              <a class="project-link" href="">repo</a>
+            </div>
+            <p class="project-tech-text">Technologies used: HTML5, CSS, Javascript, jQuery</p>
+
+
           </div>
 
         </section>
@@ -93,21 +95,24 @@
 
         <section class="projects project-2">
 
-          <div class="project-image-box">
-            <img src="./images/screencaps/quiz2.png" alt="">
-          </div>
-
-          <div class="project-title-box">
+          <div class="project-info-box">
             <h3 class="project-title">Quiz App</h3>
             <p class="project-desc-text">A simple single-page quiz app built with jQuery and ES6+ modules using a React-ful design pattern (rendering content based on state). </p>
 
+            
+
+            <div class="tech-icons"></div>
+          </div>
+
+          <div class="project-image-box">
+            <img src="./images/screencaps/quiz2.png" alt="quiz app screencap">
             <div class="link-wrap">
-              <a class="project-link" href="">live demo</a> 
+              <a class="project-link" href="">demo</a> 
               <a class="project-link" href="">repo</a>
             </div>
-            
+
             <p class="project-tech-text">Technologies used: HTML5, CSS, Javascript, jQuery</p>
-            <div class="tech-icons"></div>
+
           </div>
                    
         </section>
@@ -115,28 +120,31 @@
         <!-- TODO PROJECT 3-->
 
         <section class="projects project-3">
-          <div class="project-title-box">
+          <div class="project-info-box">
             
             <h3 class="project-title">Oblique Strategies</h3>
 
             <p class="project-desc-text">A single-page application built with vanilla Javascript that allows user to create a custom deck of suggestions and shuffle the deck. Modeled on the original Oblique Strategies concept created by Brian Eno.</p>
 
-            <div class="link-wrap">
-              <a class="project-link" href="">live demo</a> 
-              <a class="project-link" href="">repo</a>
-            </div>
+           
 
-            <p class="project-tech-text">Technologies used: HTML5, CSS, Javascript, jQuery</p>
             <div class="tech-icons"></div>
           
           </div>
 
           <div class="project-image-box">
-            <img src="./images/screencaps/obliques3.png" alt="">
+            <img src="./images/screencaps/obliques3.png" alt="oblique strategies screencap">
+            <div class="link-wrap">
+              <a class="project-link" href="">demo</a> 
+              <a class="project-link" href="">repo</a>
+            </div>
           </div>
+          
+          <p class="project-tech-text">Technologies used: HTML5, CSS, Javascript</p>
+
         </section>
 
-        <section class=" projects about">
+        <section class="projects about">
 
             <h3 class="about-title">About Me</h3>
 
@@ -151,6 +159,38 @@
         </section>
       </div>
     </main>
-    <footer role="content-info">Footer</footer>
+    <footer role="content-info">    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="wave"><defs></defs><path id="feel-the-wave" d=""/></svg>
+      </footer>
+
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script src="./scripts/tweenmax.js"></script>
+  <script src="./scripts/wavifyfull.js"></script>
+  <script src="./scripts/wavify.js"></script>
+  <script>
+  var wave1 = $('#feel-the-wave').wavify({
+    height: 80,
+    bones: 2,
+    amplitude: 25,
+    color: '#499acc',
+    speed: .12
+  });
+  
+  var colors = ['rgba(255, 281, 75, .8)', '#dc75ff', '#9d9ade', '#6cd7ee', '#aceeae']
+  
+  $("[data-color]").on('click', function(){
+    wave1.updateColor({
+      color: colors[Math.floor(Math.random()*colors.length)],
+      timing: 1
+    });
+    wave2.updateColor({
+      color: colors[Math.floor(Math.random()*colors.length)],
+      timing: 3
+    });
+    return false;
+  });</script>
+  <script type="module" src="./scripts/index.js"></script>
 </body>
 </html>
