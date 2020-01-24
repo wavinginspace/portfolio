@@ -580,4 +580,37 @@ footer {
     display: none;
   }
 }
+
+.hamburger {
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  top: .75rem;
+  right: 1.4rem;
+  fill: var(--outline);
+  -webkit-transition: fill .2s;
+  transition: fill .2s;
+}
+
+.hamburger:hover {
+  cursor: pointer;
+  fill: var(--light);
+}
+
+@media (min-width: 640px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+.hamburger-button {
+  text-decoration: none;
+  outline: none;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: inline-block;
+  background-color: var(--nav);
+  padding: 0;
+}
 /*# sourceMappingURL=styles.css.map */
