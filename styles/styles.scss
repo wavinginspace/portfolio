@@ -7,6 +7,21 @@
 // @import 'section';
 // @import 'footer';
 
+@keyframes slowRotate {
+0% {
+	transform: rotate(-10deg);
+}
+
+50% {
+	transform: rotate(10deg);
+}
+
+100% {
+	transform: rotate(-10deg);
+}
+
+}
+
 // * BODY / GLOBAL
 
 body {
@@ -261,7 +276,7 @@ h3 {
 
 @include laptop {
 	.project-info-box {
-		padding: 0 2rem;
+		padding: 0 2rem 5rem;
 	}
 }
 
@@ -305,11 +320,11 @@ h3 {
 	}
 }
 
-// @include tabletPortrait {
-// 	.project-title {
-// 		font-size: 2.25rem;
-// 	}
-// }
+@include tabletPortrait {
+	.project-title {
+		font-size: 2.25rem;
+	}
+}
 
 @include laptop {
 	.project-title {
@@ -411,7 +426,8 @@ h3 {
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	color: var(--headerog);
-	height: 100vh;
+	animation: slowRotate 10s infinite linear;
+	text-shadow: 5px 5px 10px rgba(0, 0, 0, .05);
 }
 
 .project-header-section {
@@ -430,12 +446,6 @@ h3 {
 		margin-bottom: 60px;
 	}
 }
-
-// @include tabletLandscape {
-// 	.projects:last-child {
-// 		margin-bottom: 120px;
-// 	}
-// }
 
 // * ABOUT
 
@@ -530,33 +540,25 @@ footer {
 	transition: fill .2s;
 	&:hover {
 		cursor: pointer;
-		fill: var(--light);
 	}
 }
 
 .burger-closed {
 	fill: var(--outline);
+	&:hover {
+		fill: var(--light);
+	}
 }
 
 .burger-open {
 	fill: var(--light);
+	&:hover {
+		fill: white;
+	}
 }
 
-// .hamburger-open {
-// 	width: 23px;
-// 	height: 23px;
-// 	position: absolute;
-// 	top: .75rem;
-// 	right: 1.4rem;
-// 	transition: fill .2s;
-// 	&:hover {
-// 		cursor: pointer;
-// 		fill: var(--white);
-// 	}
-// }
-
 @include mobileLandscape {
-	.hamburger-closed {
+	#burger-svg {
 		display: none;
 	}
 }
@@ -570,4 +572,10 @@ footer {
 	display: inline-block;
 	background-color: var(--nav);
 	padding: 0;
+}
+
+.seed-emoji {
+	position: relative;
+	top: 15px;
+	font-size: 24px;
 }
