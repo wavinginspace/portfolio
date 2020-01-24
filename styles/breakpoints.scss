@@ -1,3 +1,9 @@
+@mixin mobilePortrait {
+	@media (min-width: 480px) {
+		@content;
+	}
+}
+
 @mixin mobileLandscape {
 	@media (min-width: 640px) {
 		@content;

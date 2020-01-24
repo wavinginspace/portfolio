@@ -238,14 +238,35 @@ h3 {
 	align-items: center;
 }
 
+@include laptop {
+	.project-info-box {
+		padding: 0 2rem;
+	}
+}
+
 .project-image-box {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	padding: 0 2rem;
-	img {
-		max-width: 50%;
+}
+
+@include laptop {
+	.project-image-box {
+		padding: 2rem;
+	}
+}
+
+.project-image {
+	max-width: 50%;
+}
+
+// TODO FIX WEIRD IMAGE SIZE JUMP
+
+@include laptop {
+	.project-image {
+		max-width: 70%;
 	}
 }
 
@@ -254,9 +275,16 @@ h3 {
 	margin: 0 auto 3rem;
 }
 
-@include tabletPortrait {
+@include mobilePortrait {
 	.project-title {
-		font-size: 4rem;
+		font-size: 2rem;
+	}
+}
+
+@include laptop {
+	.project-title {
+		font-size: 2.5rem;
+		margin: -2rem auto 3rem;
 	}
 }
 
@@ -264,6 +292,12 @@ h3 {
 .project-tech-text {
 	font-size: .9rem;
 	width: 50%;
+}
+
+@include mobilePortrait {
+	.project-desc-text {
+		width: 70%;
+	}
 }
 
 .project-desc-text {
@@ -279,6 +313,12 @@ h3 {
 	.project-desc-text,
 	.project-tech-text {
 		font-size: 1.25rem;
+	}
+}
+
+@include laptop {
+	.project-tech-text {
+		font-size: 1rem;
 	}
 }
 
