@@ -50,7 +50,7 @@
         <header role="banner">
             <!-- <img class="selfie" src="./images/kidocean.png" width="240" alt="paul baisley"> -->
             <h1 class="name-header">Paul Baisley</h1>
-            <p class="intro-text"> Full-stack JS developer and all-around digital media enthusiast. </p>
+            <p class="intro-text"> Full-stack JS developer and all-around digital media enthusiast.</p>
         </header>
 
           <!-- SVG WAVE -->
@@ -64,6 +64,8 @@
     
       <div class="section-wrap">
 
+
+
         <!-- TODO PROJECT 1-->
 
         <section class="projects project-1">
@@ -74,22 +76,25 @@
             <p class="project-desc-text">A single-page application built with jQuery, leveraging a RESTful API. Allows user to bookmark websites, add and edit a description and rating, and filter by rating. Renders HTML dynamically based on state, a la React.</p>
             <div class="tech-icons"></div>
 
+            <p class="project-tech-text laptop">Technologies used: HTML5, CSS, Javascript, jQuery</p>
+
           </div>
 
           <div class="project-image-box">
 
-            <img class="project-image" src="./images/screencaps/bookmarks1.png" alt="bookmarks app screencap">
+            <a href="https://thinkful-ei-leopard.github.io/paul-bookmarks-app/" class="image-link"><img class="project-image" src="./images/screencaps/bookmarks1.png" alt="bookmarks app screencap"></a>
 
             <div class="link-wrap">
-              <a class="project-link" href="">demo</a> 
-              <a class="project-link" href="">repo</a>
+              <a class="project-link" href="https://thinkful-ei-leopard.github.io/paul-bookmarks-app/">demo</a> 
+              <a class="project-link" href="https://github.com/thinkful-ei-leopard/paul-bookmarks-app">repo</a>
             </div>
-            <p class="project-tech-text">Technologies used: HTML5, CSS, Javascript, jQuery</p>
-
+            <p class="project-tech-text mobile">Technologies used: HTML5, CSS, Javascript, jQuery</p>
 
           </div>
-
         </section>
+
+        <span class="divider project">~</span>
+
 
         <!-- TODO PROJECT 2-->
 
@@ -99,23 +104,25 @@
             <h3 class="project-title">Quiz App</h3>
             <p class="project-desc-text">A simple single-page quiz app built with jQuery and ES6+ modules using a React-ful design pattern (rendering content based on state). </p>
 
-            
+            <p class="project-tech-text laptop">Technologies used: HTML5, CSS, Javascript, jQuery</p>
 
             <div class="tech-icons"></div>
           </div>
 
           <div class="project-image-box">
-            <img class="project-image" src="./images/screencaps/quiz2.png" alt="quiz app screencap">
+            <a href="https://thinkful-ei-leopard.github.io/cesar-paul-quiz-app-v2/" class="image-link"><img class="project-image" src="./images/screencaps/quiz2.png" alt="quiz app screencap"></a>
             <div class="link-wrap">
-              <a class="project-link" href="">demo</a> 
-              <a class="project-link" href="">repo</a>
+              <a class="project-link" href="https://thinkful-ei-leopard.github.io/cesar-paul-quiz-app-v2/">demo</a> 
+              <a class="project-link" href="https://github.com/thinkful-ei-leopard/cesar-paul-quiz-app-v2">repo</a>
             </div>
 
-            <p class="project-tech-text">Technologies used: HTML5, CSS, Javascript, jQuery</p>
+            <p class="project-tech-text mobile">Technologies used: HTML5, CSS, Javascript, jQuery</p>
 
-          </div>
-                   
+          </div>       
         </section>
+
+        <span class="divider project">~</span>
+
 
         <!-- TODO PROJECT 3-->
 
@@ -127,25 +134,28 @@
             <p class="project-desc-text">A single-page application built with vanilla Javascript that allows user to create a custom deck of suggestions and shuffle the deck. Modeled on the original Oblique Strategies concept created by Brian Eno.</p>
 
            
+            <p class="project-tech-text laptop">Technologies used: HTML5, CSS, Javascript</p>
 
             <div class="tech-icons"></div>
           
           </div>
 
           <div class="project-image-box">
-            <img class="project-image" src="./images/screencaps/obliques3.png" alt="oblique strategies screencap">
-            <div class="link-wrap">
-              <a class="project-link" href="">demo</a> 
-              <a class="project-link" href="">repo</a>
+            <a class="image-link" href="https://wavinginspace.github.io/obliques/"><img class="project-image" src="./images/screencaps/obliques3.png" alt="oblique strategies screencap"></a>
+              <div class="link-wrap">
+               <a class="project-link" href="https://wavinginspace.github.io/obliques/">demo</a> 
+               <a class="project-link" href="https://github.com/wavinginspace/obliques">repo</a>
+              </div>
+                <p class="project-tech-text mobile">Technologies used: HTML5, CSS, Javascript</p>
             </div>
           </div>
           
-          <p class="project-tech-text">Technologies used: HTML5, CSS, Javascript</p>
-
         </section>
 
-        <section class="projects about">
+        <span class="divider about">~</span>
 
+        <section class="about">
+            <div class="about-wrapper">
             <h3 class="about-title">About Me</h3>
 
             <p class="about-text"> Hi! My name is Paul. I love creating things. Ever since I was a kid, I wanted to be an artist. I've spent much of my life realizing that vision, working across a wide [array] of disciplines, from music and audio/video production to drawing, painting and graphic design, in addition to running an independent record label for over a decade. </p>
@@ -155,6 +165,7 @@
             <p class="about-text">I found the answer in software development. First as a flame, but soon as a roaring bonfire, once I began to understand the limitless possibilities afforded to those who could speak computer. From this intersection of technology and art is where I ground myself. It is where I attempt to synthesize my creative skillset, and where I continue to grow and find new ways to create meaningful work that helps uplift and inspire others.</p>
 
             <p class="about-text"> I look forward to playing with you! </p>
+          </div>
 
         </section>
       </div>
@@ -169,28 +180,8 @@
   <script src="./scripts/tweenmax.js"></script>
   <script src="./scripts/wavifyfull.js"></script>
   <script src="./scripts/wavify.js"></script>
-  <script>
-  var wave1 = $('#feel-the-wave').wavify({
-    height: 80,
-    bones: 2,
-    amplitude: 25,
-    color: '#499acc',
-    speed: .12
-  });
-  
-  var colors = ['rgba(255, 281, 75, .8)', '#dc75ff', '#9d9ade', '#6cd7ee', '#aceeae']
-  
-  $("[data-color]").on('click', function(){
-    wave1.updateColor({
-      color: colors[Math.floor(Math.random()*colors.length)],
-      timing: 1
-    });
-    wave2.updateColor({
-      color: colors[Math.floor(Math.random()*colors.length)],
-      timing: 3
-    });
-    return false;
-  });</script>
+  <script src="./scripts/waveprops.js">
+  </script>
   <script type="module" src="./scripts/index.js"></script>
 </body>
 </html>

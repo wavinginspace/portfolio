@@ -44,7 +44,6 @@ nav {
 	padding: 1rem;
 	transition: background-color .2s;
 	&:hover {
-		// background-color: var(--light);
 	}
 }
 
@@ -79,30 +78,15 @@ nav {
 	}
 }
 
-//decide whether or not to use position absolute for .social-links
-// ! opacity transition lagging on resize
-
 .social-links {
-	// position: absolute;
-	// top: .75rem;
-	// right: .75rem;
-	// transition: opacity .7s;
 	display: none;
 }
 
 @include mobileLandscape {
 	.social-links {
-		// opacity: 1;
-		// transform: translateZ(0);
 		display: flex;
 	}
 }
-
-// @include tabletLandscape {
-// 	.social-links {
-// 		right: 1.5rem;
-// 	}
-// }
 
 .social-logo-svg {
 	width: 24px;
@@ -143,6 +127,7 @@ header {
 	font-size: 2rem;
 	margin-bottom: 1.5rem;
 	text-transform: uppercase;
+	color: var(--outline);
 }
 
 @include mobileLandscape {
@@ -184,6 +169,12 @@ h2 {
 	}
 }
 
+@include tabletPortrait {
+	h2 {
+		font-size: 5rem;
+	}
+}
+
 @include tabletLandscape {
 	h2 {
 		font-size: 6rem;
@@ -206,15 +197,11 @@ h3 {
 	}
 }
 
-// .section-wrap {
-// 	padding: 0 2rem;
-// }
-
 .projects {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(600px, 2fr));
 	padding: 2rem;
-	// border-bottom: 5px solid var(--headerog);
+	margin-bottom: 2rem;
 	img {
 		min-width: 50%;
 		box-shadow: 5px 10px 10px 10px rgba(0, 0, 0, .03);
@@ -225,8 +212,15 @@ h3 {
 	}
 }
 
-.project-2 {
-	grid-auto-flow: dense;
+@include laptop {
+.projects {
+	margin-bottom: 2rem;
+}
+
+	.project-2 .project-info-box {
+		grid-column: 2/3;
+		grid-row: 1/3;
+	}
 }
 
 .project-info-box {
@@ -262,17 +256,20 @@ h3 {
 	max-width: 50%;
 }
 
-// TODO FIX WEIRD IMAGE SIZE JUMP
-
 @include laptop {
 	.project-image {
 		max-width: 70%;
 	}
 }
 
+.image-link {
+	@include flexCenter();
+}
+
 .project-title {
 	font-size: 1.5rem;
 	margin: 0 auto 3rem;
+	color: var(--outline);
 }
 
 @include mobilePortrait {
@@ -280,6 +277,12 @@ h3 {
 		font-size: 2rem;
 	}
 }
+
+// @include tabletPortrait {
+// 	.project-title {
+// 		font-size: 2.25rem;
+// 	}
+// }
 
 @include laptop {
 	.project-title {
@@ -292,6 +295,7 @@ h3 {
 .project-tech-text {
 	font-size: .9rem;
 	width: 50%;
+	color: var(--outline);
 }
 
 @include mobilePortrait {
@@ -301,7 +305,7 @@ h3 {
 }
 
 .project-desc-text {
-	margin: 0 auto 2rem;
+	margin: 0 auto 1.5rem;
 }
 
 .project-tech-text {
@@ -312,13 +316,35 @@ h3 {
 @include mobileLandscape {
 	.project-desc-text,
 	.project-tech-text {
+		font-size: 1rem;
+	}
+}
+
+@include tabletPortrait {
+	.project-desc-text {
 		font-size: 1.25rem;
+		margin: .5rem auto 2rem;
 	}
 }
 
 @include laptop {
 	.project-tech-text {
-		font-size: 1rem;
+		font-size: 1.25rem;
+	}
+}
+
+.project-tech-text.laptop {
+	display: none;
+}
+
+@include laptop {
+	.project-tech-text.laptop {
+		display: block;
+		margin-top: 1rem;
+	}
+
+	.project-tech-text.mobile {
+		display: none;
 	}
 }
 
@@ -332,9 +358,23 @@ h3 {
 	margin-bottom: 1rem;
 }
 
+@include mobileLandscape {
+	.link-wrap {
+		margin-top: .5rem;
+	}
+}
+
 .project-link {
 	margin: 1rem 2rem;
 	font-size: 1rem;
+	color: purple;
+}
+
+@include tabletPortrait {
+	.project-link {
+		font-size: 1.25rem;
+		margin: 1.5rem 2.5rem;
+	}
 }
 
 .project-header {
@@ -352,9 +392,21 @@ h3 {
 	@include flexCenter();
 }
 
+@include laptop {
+	.project-header-section {
+		margin-bottom: 100px;
+	}
+}
+
+@include tabletPortrait {
+	.projects:last-child {
+		margin-bottom: 60px;
+	}
+}
+
 // @include tabletLandscape {
-// 	.projects {
-// 		@include flexCenter();
+// 	.projects:last-child {
+// 		margin-bottom: 120px;
 // 	}
 // }
 
@@ -362,23 +414,45 @@ h3 {
 
 .about {
 	display: block;
-	padding: 3rem 0 4rem;
+	padding: 3rem 0 0;
 	text-align: center;
 	height: 100%;
-	// background-image: linear-gradient(0deg, var(--nav), white);
-	padding-bottom: 0;
 }
 
 .about-title {
 	margin: 2rem auto 3rem;
+	color: var(--outline);
 }
 
 .about-text {
 	display: block;
-	width: 70%;
+	width: 80%;
 	margin: 0 auto 2rem;
-	font-size: .9rem;
-	line-height: 1.3rem;
+	font-size: .8rem;
+	line-height: 1.2rem;
+	color: var(--outline);
+}
+
+@include mobilePortrait {
+	.about-text {
+		font-size: .9rem;
+		line-height: 1.3rem;
+		width: 70%;
+	}
+}
+
+@include tabletPortrait {
+	.about-text {
+		font-size: 1rem;
+		line-height: 1.4rem;
+	}
+}
+
+@include laptop {
+	.about-text {
+		line-height: 1.5rem;
+		max-width: 50%;
+	}
 }
 
 @include tabletLandscape {
@@ -396,8 +470,26 @@ h3 {
 // * FOOTER
 
 footer {
-	// @include flexCenter();
-	// padding: 4rem 2rem 4rem;
-	// background-color: var(--nav);
 	height: 200px;
+}
+
+// * EXTRAS
+
+.divider.about {
+	@include flexCenter();
+	font-size: 6rem;
+	margin-bottom: 80px;
+	color: var(--outline);
+}
+
+.divider.project {
+	@include flexCenter();
+	font-size: 4rem;
+	color: var(--outline);
+}
+
+@include laptop {
+	.divider.project {
+		display: none;
+	}
 }
