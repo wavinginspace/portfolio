@@ -199,7 +199,7 @@ h2 {
 
 @include mobilePortrait {
 	h2 {
-		font-size: 3.5rem;
+		font-size: 3.75rem;
 	}
 }
 
@@ -239,8 +239,7 @@ h3 {
 
 .projects {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(600px, 2fr));
-	padding: 2rem;
+	grid-template-columns: repeat(auto-fit, minmax(1fr, 2fr));
 	margin-bottom: 2rem;
 	img {
 		min-width: 50%;
@@ -254,7 +253,8 @@ h3 {
 
 @include laptop {
 	.projects {
-		margin-bottom: 2rem;
+		padding: 2rem;
+		grid-template-columns: repeat(auto-fit, minmax(600px, 2fr));
 	}
 
 	.project-2 .project-info-box {
@@ -266,16 +266,22 @@ h3 {
 .project-info-box {
 	display: flex;
 	flex-direction: column;
-	padding: 2rem;
+	// padding: 2rem;
 	text-align: center;
 	justify-content: center;
 	align-items: center;
 	max-width: 100%;
 }
 
+@include tabletPortrait {
+	.project-info-box {
+		padding: 1rem 2rem 1.5rem;
+	}
+}
+
 @include laptop {
 	.project-info-box {
-		padding: 0 2rem 5rem;
+		padding: 2rem 2rem 5rem;
 	}
 }
 
@@ -284,7 +290,6 @@ h3 {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	padding: 0 2rem;
 	max-width: 100%;
 }
 
@@ -295,9 +300,16 @@ h3 {
 }
 
 .project-image {
-	max-width: 50%;
-	width: 100%;
+	max-width: 100%;
+	width: 70%;
 	transition: transform 5s;
+	margin: .75rem auto;
+}
+
+@include mobilePortrait {
+	.project-image {
+		margin: 1.25rem auto;
+	}
 }
 
 .project-image:hover {
@@ -316,7 +328,7 @@ h3 {
 
 .project-title {
 	font-size: 1.5rem;
-	margin: 0 auto 3rem;
+	margin: 0 auto 2.5rem;
 	color: var(--outline);
 }
 
@@ -342,7 +354,7 @@ h3 {
 .project-desc-text,
 .project-tech-text {
 	font-size: .9rem;
-	width: 50%;
+	width: 70%;
 	color: var(--outline);
 }
 
@@ -476,9 +488,21 @@ h3 {
 
 .about {
 	display: block;
-	padding: 3rem 0 0;
+	padding: 1rem 0 0;
 	text-align: center;
 	height: 100%;
+}
+
+@include tabletPortrait {
+	.about {
+		padding: 2rem 0 0;
+	}
+}
+
+@include laptop {
+	.about {
+		padding: 4rem 0 0;
+	}
 }
 
 .about-title {
@@ -546,8 +570,16 @@ footer {
 
 .divider.project {
 	@include flexCenter();
-	font-size: 4rem;
+	font-size: 3rem;
 	color: var(--outline);
+	margin: 3rem auto;
+}
+
+@include mobileLandscape {
+	.divider.project {
+		font-size: 4rem;
+		margin: 6rem auto;
+	}
 }
 
 @include laptop {

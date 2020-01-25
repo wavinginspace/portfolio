@@ -334,7 +334,7 @@ h2 {
 
 @media (min-width: 480px) {
   h2 {
-    font-size: 3.5rem;
+    font-size: 3.75rem;
   }
 }
 
@@ -375,9 +375,8 @@ h3 {
 .projects {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(600px, 2fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(600px, 2fr));
-  padding: 2rem;
+  -ms-grid-columns: (minmax(1fr, 2fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(1fr, 2fr));
   margin-bottom: 2rem;
 }
 
@@ -394,7 +393,9 @@ h3 {
 
 @media (min-width: 1264px) {
   .projects {
-    margin-bottom: 2rem;
+    padding: 2rem;
+    -ms-grid-columns: (minmax(600px, 2fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(600px, 2fr));
   }
   .project-2 .project-info-box {
     -ms-grid-column: 2;
@@ -414,7 +415,6 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 2rem;
   text-align: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -425,9 +425,15 @@ h3 {
   max-width: 100%;
 }
 
+@media (min-width: 768px) {
+  .project-info-box {
+    padding: 1rem 2rem 1.5rem;
+  }
+}
+
 @media (min-width: 1264px) {
   .project-info-box {
-    padding: 0 2rem 5rem;
+    padding: 2rem 2rem 5rem;
   }
 }
 
@@ -445,7 +451,6 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 0 2rem;
   max-width: 100%;
 }
 
@@ -456,12 +461,19 @@ h3 {
 }
 
 .project-image {
-  max-width: 50%;
-  width: 100%;
+  max-width: 100%;
+  width: 70%;
   -webkit-transition: -webkit-transform 5s;
   transition: -webkit-transform 5s;
   transition: transform 5s;
   transition: transform 5s, -webkit-transform 5s;
+  margin: .75rem auto;
+}
+
+@media (min-width: 480px) {
+  .project-image {
+    margin: 1.25rem auto;
+  }
 }
 
 .project-image:hover {
@@ -489,7 +501,7 @@ h3 {
 
 .project-title {
   font-size: 1.5rem;
-  margin: 0 auto 3rem;
+  margin: 0 auto 2.5rem;
   color: var(--outline);
 }
 
@@ -515,7 +527,7 @@ h3 {
 .project-desc-text,
 .project-tech-text {
   font-size: .9rem;
-  width: 50%;
+  width: 70%;
   color: var(--outline);
 }
 
@@ -675,9 +687,21 @@ h3 {
 
 .about {
   display: block;
-  padding: 3rem 0 0;
+  padding: 1rem 0 0;
   text-align: center;
   height: 100%;
+}
+
+@media (min-width: 768px) {
+  .about {
+    padding: 2rem 0 0;
+  }
+}
+
+@media (min-width: 1264px) {
+  .about {
+    padding: 4rem 0 0;
+  }
 }
 
 .about-title {
@@ -756,8 +780,16 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 4rem;
+  font-size: 3rem;
   color: var(--outline);
+  margin: 3rem auto;
+}
+
+@media (min-width: 640px) {
+  .divider.project {
+    font-size: 4rem;
+    margin: 6rem auto;
+  }
 }
 
 @media (min-width: 1264px) {
