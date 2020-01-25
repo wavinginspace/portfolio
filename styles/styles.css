@@ -124,6 +124,7 @@ body {
 
 a {
   text-decoration: none;
+  color: #5a46de;
 }
 
 a:hover {
@@ -608,7 +609,6 @@ h3 {
 .project-link {
   margin: 1rem 2rem;
   font-size: 1rem;
-  color: purple;
 }
 
 @media (min-width: 768px) {
@@ -798,9 +798,8 @@ footer {
   }
 }
 
-#burger-svg {
-  width: 23px;
-  height: 23px;
+#burger-svg,
+#x-icon {
   position: absolute;
   top: .75rem;
   right: 1.4rem;
@@ -808,8 +807,34 @@ footer {
   transition: fill .2s;
 }
 
-#burger-svg:hover {
+#burger-svg:hover,
+#x-icon:hover {
   cursor: pointer;
+}
+
+#burger-svg {
+  width: 23px;
+  height: 23px;
+}
+
+#x-icon {
+  width: 30px;
+  height: 30px;
+  top: .55rem;
+  right: 1.2rem;
+}
+
+.x-icon-closed {
+  display: none;
+}
+
+.x-icon-open {
+  display: inline-block;
+  stroke: white;
+}
+
+.x-icon-open:hover {
+  stroke: var(--light);
 }
 
 .burger-closed {
@@ -821,11 +846,7 @@ footer {
 }
 
 .burger-open {
-  fill: var(--light);
-}
-
-.burger-open:hover {
-  fill: white;
+  display: none;
 }
 
 @media (min-width: 640px) {
@@ -834,7 +855,7 @@ footer {
   }
 }
 
-.hamburger-button {
+.menu-button {
   text-decoration: none;
   outline: none;
   border: none;
