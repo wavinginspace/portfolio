@@ -19,33 +19,27 @@
   height: 100%;
 }
 
-@-webkit-keyframes slowRotate {
+@-webkit-keyframes textStretch {
   0% {
-    -webkit-transform: rotate(-10deg);
-            transform: rotate(-10deg);
+    letter-spacing: 0;
   }
   50% {
-    -webkit-transform: rotate(10deg);
-            transform: rotate(10deg);
+    letter-spacing: 60px;
   }
   100% {
-    -webkit-transform: rotate(-10deg);
-            transform: rotate(-10deg);
+    letter-spacing: 0;
   }
 }
 
-@keyframes slowRotate {
+@keyframes textStretch {
   0% {
-    -webkit-transform: rotate(-10deg);
-            transform: rotate(-10deg);
+    letter-spacing: 0;
   }
   50% {
-    -webkit-transform: rotate(10deg);
-            transform: rotate(10deg);
+    letter-spacing: 60px;
   }
   100% {
-    -webkit-transform: rotate(-10deg);
-            transform: rotate(-10deg);
+    letter-spacing: 0;
   }
 }
 
@@ -531,8 +525,8 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 2px;
   color: var(--headerog);
-  -webkit-animation: slowRotate 10s infinite linear;
-          animation: slowRotate 10s infinite linear;
+  -webkit-animation: textStretch 40s infinite linear;
+          animation: textStretch 40s infinite linear;
   text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
 }
 
@@ -557,7 +551,7 @@ h3 {
 
 @media (min-width: 768px) {
   .projects:last-child {
-    margin-bottom: 60px;
+    margin-bottom: 0;
   }
 }
 
@@ -705,5 +699,31 @@ footer {
   position: relative;
   top: 15px;
   font-size: 24px;
+}
+
+.squiggle {
+  width: 500px;
+  height: 300px;
+  margin: 1rem auto 4rem;
+}
+
+.squigglePath {
+  stroke: var(--headerog);
+  stroke-width: 10px;
+  stroke-linecap: round;
+  fill: none;
+}
+
+.squigglewrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 4rem;
 }
 /*# sourceMappingURL=styles.css.map */

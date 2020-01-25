@@ -1,0 +1,13 @@
+@keyframes textStretch {
+	0% {
+		letter-spacing: 0;
+	}
+
+	50% {
+		letter-spacing: 60px;
+	}
+
+	100% {
+		letter-spacing: 0;
+	}
+}

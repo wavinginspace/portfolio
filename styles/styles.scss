@@ -2,25 +2,11 @@
 @import 'variables';
 @import 'breakpoints';
 @import 'wave';
+@import 'animations';
 // @import 'nav';
 // @import 'header';
 // @import 'section';
 // @import 'footer';
-
-@keyframes slowRotate {
-0% {
-	transform: rotate(-10deg);
-}
-
-50% {
-	transform: rotate(10deg);
-}
-
-100% {
-	transform: rotate(-10deg);
-}
-
-}
 
 // * BODY / GLOBAL
 
@@ -122,7 +108,7 @@ nav {
 	left: 0;
 	position: absolute;
 	height: 50px;
-	background-color:var(--outline);
+	background-color: var(--outline);
 	width: 100%;
 	padding: 1rem;
 	transition: transform .5s ease-out;
@@ -255,9 +241,9 @@ h3 {
 }
 
 @include laptop {
-.projects {
-	margin-bottom: 2rem;
-}
+	.projects {
+		margin-bottom: 2rem;
+	}
 
 	.project-2 .project-info-box {
 		grid-column: 2/3;
@@ -426,7 +412,7 @@ h3 {
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	color: var(--headerog);
-	animation: slowRotate 10s infinite linear;
+	animation: textStretch 40s infinite linear;
 	text-shadow: 5px 5px 10px rgba(0, 0, 0, .05);
 }
 
@@ -443,7 +429,7 @@ h3 {
 
 @include tabletPortrait {
 	.projects:last-child {
-		margin-bottom: 60px;
+		margin-bottom: 0;
 	}
 }
 
@@ -578,4 +564,22 @@ footer {
 	position: relative;
 	top: 15px;
 	font-size: 24px;
+}
+
+.squiggle {
+	width: 500px;
+	height: 300px;
+	margin: 1rem auto 4rem;
+}
+
+.squigglePath {
+	stroke: var(--headerog);
+	stroke-width: 10px;
+	stroke-linecap: round;
+	fill: none;
+}
+
+.squigglewrap {
+	@include flexCenter();
+	margin-bottom: 4rem;
 }
