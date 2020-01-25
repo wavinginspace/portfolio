@@ -22,6 +22,10 @@ a {
 	}
 }
 
+em {
+	font-weight: 500;
+}
+
 p {
 	line-height: 1.5;
 }
@@ -191,6 +195,12 @@ h2 {
 	font-size: 3rem;
 }
 
+@include mobilePortrait {
+	h2 {
+		font-size: 3.5rem;
+	}
+}
+
 @include mobileLandscape {
 	h2 {
 		font-size: 4rem;
@@ -282,6 +292,11 @@ h3 {
 
 .project-image {
 	max-width: 50%;
+	transition: transform 5s;
+}
+
+.project-image:hover {
+	transform: scale(1.05);
 }
 
 @include laptop {
@@ -411,9 +426,28 @@ h3 {
 	font-weight: 600;
 	text-transform: uppercase;
 	letter-spacing: 2px;
-	color: var(--headerog);
-	animation: textStretch 40s infinite linear;
+	color: #ff5c5c;
 	text-shadow: 5px 5px 10px rgba(0, 0, 0, .05);
+	max-width: 100%;
+	animation: textStretchSmall 40s infinite linear;
+}
+
+@include mobilePortrait {
+	.project-header {
+		animation: textStretchMediumSmall 40s infinite linear;
+	}
+}
+
+@include mobileLandscape {
+	.project-header {
+		animation: textStretchMedium 40s infinite linear;
+	}
+}
+
+@include laptop {
+	.project-header {
+		animation: textStretchLarge 40s infinite linear;
+	}
 }
 
 .project-header-section {

@@ -1,4 +1,46 @@
-@keyframes textStretch {
+@keyframes textStretchSmall {
+	0% {
+		letter-spacing: 0;
+	}
+
+	50% {
+		letter-spacing: 10px;
+	}
+
+	100% {
+		letter-spacing: 0;
+	}
+}
+
+@keyframes textStretchMediumSmall {
+	0% {
+		letter-spacing: 0;
+	}
+
+	50% {
+		letter-spacing: 20px;
+	}
+
+	100% {
+		letter-spacing: 0;
+	}
+}
+
+@keyframes textStretchMedium {
+	0% {
+		letter-spacing: 0;
+	}
+
+	50% {
+		letter-spacing: 30px;
+	}
+
+	100% {
+		letter-spacing: 0;
+	}
+}
+
+@keyframes textStretchLarge {
 	0% {
 		letter-spacing: 0;
 	}

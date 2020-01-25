@@ -19,7 +19,79 @@
   height: 100%;
 }
 
-@-webkit-keyframes textStretch {
+@-webkit-keyframes textStretchSmall {
+  0% {
+    letter-spacing: 0;
+  }
+  50% {
+    letter-spacing: 10px;
+  }
+  100% {
+    letter-spacing: 0;
+  }
+}
+
+@keyframes textStretchSmall {
+  0% {
+    letter-spacing: 0;
+  }
+  50% {
+    letter-spacing: 10px;
+  }
+  100% {
+    letter-spacing: 0;
+  }
+}
+
+@-webkit-keyframes textStretchMediumSmall {
+  0% {
+    letter-spacing: 0;
+  }
+  50% {
+    letter-spacing: 20px;
+  }
+  100% {
+    letter-spacing: 0;
+  }
+}
+
+@keyframes textStretchMediumSmall {
+  0% {
+    letter-spacing: 0;
+  }
+  50% {
+    letter-spacing: 20px;
+  }
+  100% {
+    letter-spacing: 0;
+  }
+}
+
+@-webkit-keyframes textStretchMedium {
+  0% {
+    letter-spacing: 0;
+  }
+  50% {
+    letter-spacing: 30px;
+  }
+  100% {
+    letter-spacing: 0;
+  }
+}
+
+@keyframes textStretchMedium {
+  0% {
+    letter-spacing: 0;
+  }
+  50% {
+    letter-spacing: 30px;
+  }
+  100% {
+    letter-spacing: 0;
+  }
+}
+
+@-webkit-keyframes textStretchLarge {
   0% {
     letter-spacing: 0;
   }
@@ -31,7 +103,7 @@
   }
 }
 
-@keyframes textStretch {
+@keyframes textStretchLarge {
   0% {
     letter-spacing: 0;
   }
@@ -54,6 +126,10 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+em {
+  font-weight: 500;
 }
 
 p {
@@ -254,6 +330,12 @@ h2 {
   font-size: 3rem;
 }
 
+@media (min-width: 480px) {
+  h2 {
+    font-size: 3.5rem;
+  }
+}
+
 @media (min-width: 640px) {
   h2 {
     font-size: 4rem;
@@ -371,6 +453,15 @@ h3 {
 
 .project-image {
   max-width: 50%;
+  -webkit-transition: -webkit-transform 5s;
+  transition: -webkit-transform 5s;
+  transition: transform 5s;
+  transition: transform 5s, -webkit-transform 5s;
+}
+
+.project-image:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 @media (min-width: 1264px) {
@@ -524,10 +615,32 @@ h3 {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--headerog);
-  -webkit-animation: textStretch 40s infinite linear;
-          animation: textStretch 40s infinite linear;
+  color: #ff5c5c;
   text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+  max-width: 100%;
+  -webkit-animation: textStretchSmall 40s infinite linear;
+          animation: textStretchSmall 40s infinite linear;
+}
+
+@media (min-width: 480px) {
+  .project-header {
+    -webkit-animation: textStretchMediumSmall 40s infinite linear;
+            animation: textStretchMediumSmall 40s infinite linear;
+  }
+}
+
+@media (min-width: 640px) {
+  .project-header {
+    -webkit-animation: textStretchMedium 40s infinite linear;
+            animation: textStretchMedium 40s infinite linear;
+  }
+}
+
+@media (min-width: 1264px) {
+  .project-header {
+    -webkit-animation: textStretchLarge 40s infinite linear;
+            animation: textStretchLarge 40s infinite linear;
+  }
 }
 
 .project-header-section {
