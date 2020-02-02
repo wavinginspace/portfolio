@@ -431,7 +431,7 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  text-align: center;
+  text-align: left;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -545,6 +545,7 @@ h3 {
   font-size: 0.9rem;
   width: 70%;
   color: var(--outline);
+  text-align: left;
 }
 
 @media (min-width: 480px) {
@@ -731,6 +732,12 @@ h3 {
   font-size: 0.8rem;
   line-height: 1.2rem;
   color: var(--outline);
+  text-align: left;
+  text-indent: 3rem;
+}
+
+.about-text.end {
+  text-align: center;
 }
 
 @media (min-width: 480px) {

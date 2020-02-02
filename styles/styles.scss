@@ -283,8 +283,7 @@ h3 {
 .project-info-box {
   display: flex;
   flex-direction: column;
-  // padding: 2rem;
-  text-align: center;
+  text-align: left;
   justify-content: center;
   align-items: center;
   max-width: 100%;
@@ -372,7 +371,8 @@ h3 {
 .project-tech-text {
   font-size: 0.9rem;
   width: 70%;
-  color: var(--outline);
+	color: var(--outline);
+	text-align: left;
 }
 
 @include mobilePortrait {
@@ -532,7 +532,13 @@ h3 {
   margin: 0 auto 2rem;
   font-size: 0.8rem;
   line-height: 1.2rem;
-  color: var(--outline);
+	color: var(--outline);
+	text-align: left;
+	text-indent: 3rem;
+}
+
+.about-text.end {
+	text-align: center;
 }
 
 @include mobilePortrait {
@@ -748,10 +754,6 @@ footer {
 
 .burger-open {
   display: none;
-  // fill: var(--light);
-  // &:hover {
-  // 	fill: white;
-  // }
 }
 
 @include mobileLandscape {
