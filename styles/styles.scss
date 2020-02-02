@@ -1,12 +1,14 @@
-@import 'mixins';
-@import 'variables';
-@import 'breakpoints';
-@import 'wave';
-@import 'animations';
+@import './_mixins.scss';
+@import './_variables.scss';
+@import './_breakpoints.scss';
+@import './_wave.scss';
+@import './_animations.scss';
 // @import 'nav';
 // @import 'header';
 // @import 'section';
 // @import 'footer';
+
+//test
 
 // * BODY / GLOBAL
 
@@ -49,7 +51,7 @@ nav {
   border-bottom: 2px solid var(--outline);
   background-color: var(--nav);
   font-weight: 500;
-  padding: .5rem;
+  padding: 0.5rem;
   transition: background-color 0.2s;
 }
 
@@ -71,8 +73,8 @@ nav {
   display: flex;
   align-items: center;
   li {
-		margin: 0 0.5rem;
-		font-size: .92rem;
+    margin: 0 0.5rem;
+    font-size: 0.92rem;
     a {
       color: var(--outline);
       transition: color 0.2s;
@@ -87,12 +89,11 @@ nav {
   .navlinks,
   .social-links {
     li {
-			font-size: 100%;
-			margin: 0.7rem;
+      font-size: 100%;
+      margin: 0.7rem;
     }
   }
 }
-
 
 @include mobileLandscape {
   .navlinks,
@@ -371,8 +372,8 @@ h3 {
 .project-tech-text {
   font-size: 0.9rem;
   width: 70%;
-	color: var(--outline);
-	text-align: left;
+  color: var(--outline);
+  text-align: center;
 }
 
 @include mobilePortrait {
@@ -532,13 +533,13 @@ h3 {
   margin: 0 auto 2rem;
   font-size: 0.8rem;
   line-height: 1.2rem;
-	color: var(--outline);
-	text-align: left;
-	text-indent: 3rem;
+  color: var(--outline);
+  text-align: left;
+  text-indent: 3rem;
 }
 
 .about-text.end {
-	text-align: center;
+  text-align: center;
 }
 
 @include mobilePortrait {
@@ -606,80 +607,78 @@ footer {
 }
 
 .social-logo-svg.bottom {
-	width: 24px;
-	height: 24px;
+  width: 24px;
+  height: 24px;
 }
 
 #mail-logo {
-	width: 25px;
-	height: 25px;
-	margin-top: 4px;
+  width: 25px;
+  height: 25px;
+  margin-top: 4px;
 }
 
 @include mobilePortrait {
-
-	.contact-header {
-		font-size: 2rem;
-	}
+  .contact-header {
+    font-size: 2rem;
+  }
 
   .contact-details-links li {
     margin: 3.5rem 1.5rem;
-	}
-	
-	.social-logo-svg.bottom {
-		width: 32px;
-		height: 32px;
-	}
+  }
 
-	#mail-logo {
-		width: 34px;
-		height: 34px;
-		margin-top: 4px;
-	}
+  .social-logo-svg.bottom {
+    width: 32px;
+    height: 32px;
+  }
+
+  #mail-logo {
+    width: 34px;
+    height: 34px;
+    margin-top: 4px;
+  }
 }
 
 @include tabletPortrait {
-	.contact-header {
-		font-size: 2.5rem;
-	}
+  .contact-header {
+    font-size: 2.5rem;
+  }
 
   .contact-details-links li {
     margin: 6rem 3.5rem;
-	}
-	
-	.social-logo-svg.bottom {
-		width: 48px;
-		height: 48px;
-	}
+  }
 
-	#mail-logo {
-		width: 52px;
-		height: 52px;
-		margin-top: 5px;
-	}
+  .social-logo-svg.bottom {
+    width: 48px;
+    height: 48px;
+  }
+
+  #mail-logo {
+    width: 52px;
+    height: 52px;
+    margin-top: 5px;
+  }
 }
 
 @include tabletLandscape {
-	.contact-header {
-		font-size: 3rem;
-	}
+  .contact-header {
+    font-size: 3rem;
+  }
 
   .contact-details-links li {
     margin: 6rem 3.5rem;
-	}
-	
-	.social-logo-svg.bottom {
-		width: 60px;
-		height: 60px;
-	}
+  }
 
-	#mail-logo {
-		width: 64px;
-		height: 64px;
-		margin-top: 5px;
-	}
+  .social-logo-svg.bottom {
+    width: 60px;
+    height: 60px;
+  }
+
+  #mail-logo {
+    width: 64px;
+    height: 64px;
+    margin-top: 5px;
+  }
 }
-
 
 // * EXTRAS
 
