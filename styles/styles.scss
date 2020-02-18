@@ -12,6 +12,10 @@
 
 // * BODY / GLOBAL
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-size: 16px;
   font-family: 'Source Code Pro', monospace;
