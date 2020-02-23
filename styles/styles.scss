@@ -14,14 +14,14 @@
 
 html {
   scroll-behavior: smooth;
-  overscroll-behavior: contain;
+  overscroll-behavior: none;
 }
 
 body {
   font-size: 16px;
   font-family: 'Source Code Pro', monospace;
   max-width: 100%;
-  overscroll-behavior: contain;
+  overscroll-behavior: none;
 }
 
 main {
