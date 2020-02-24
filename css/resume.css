@@ -25,6 +25,7 @@ h1 {
   text-transform: uppercase;
   font-weight: bold;
   padding-bottom: 1rem;
+  letter-spacing: 0.25rem;
 }
 
 p {
@@ -68,21 +69,25 @@ p {
 }
 
 section {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 section h3 {
+  letter-spacing: 1.5px;
   padding-bottom: 1.5rem;
   font-weight: 500;
   text-transform: uppercase;
 }
 
 section h4 {
-  padding-bottom: 0.5rem;
+  padding-bottom: 1rem;
 }
 
 section p {
-  line-height: 1.2;
+  line-height: 1.4;
+}
+.projects p,
+.skills p {
   margin-bottom: 1rem;
 }
 
@@ -96,6 +101,60 @@ section p {
 
 .project-info-links a {
   font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.project-info-links.last {
+  padding-bottom: 0;
+}
+
+.technologies {
+  font-style: italic;
+}
+
+.skills h4 {
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding-bottom: 0.5rem;
+}
+
+.skills p {
+  font-style: italic;
+}
+
+.skill-title {
+  font-style: normal;
+  font-weight: 500;
+}
+
+.skills:last-child {
+  margin-bottom: 0;
+}
+
+.skill.last {
+  margin-bottom: 0;
+}
+
+.emoji {
+  margin-right: 0.25rem;
+}
+
+.job-description,
+.school-description {
+  padding-bottom: 0;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.experience h4,
+.education h4,
+h5 {
+  font-size: 0.8rem;
+  padding-bottom: 0.2rem;
+}
+
+.experience h4,
+.education h4 {
   font-weight: 500;
 }
 
