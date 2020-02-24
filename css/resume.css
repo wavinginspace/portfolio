@@ -1,0 +1,138 @@
+body {
+  font-size: 16px;
+  font-family: 'Fira Mono';
+  max-width: 100%;
+  overscroll-behavior: none;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+header {
+  position: relative;
+  line-height: 1.1;
+  // padding-top: 1rem;
+  border-bottom: 2px solid black;
+  width: 90%;
+  margin-bottom: 1.5rem;
+}
+
+main {
+  width: 90%;
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-bottom: 1rem;
+}
+
+p {
+  font-size: 0.8rem;
+}
+
+.job-title {
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+}
+
+.contact-info,
+.social-links {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.slash-divider {
+  display: none;
+}
+
+.social-links {
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-align: right;
+}
+
+.social-links a {
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.contact-info {
+  margin-bottom: 0.5rem;
+}
+
+.contact-info > * {
+  margin-bottom: 0.2rem;
+  font-size: 0.8rem;
+}
+
+section {
+  margin-bottom: 1.5rem;
+}
+
+section h3 {
+  padding-bottom: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+section h4 {
+  padding-bottom: 0.5rem;
+}
+
+section p {
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.project-info a {
+  margin-right: 0.2rem;
+}
+
+.project-info-links {
+  padding-bottom: 2rem;
+}
+
+.project-info-links a {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-family: 'Fira Mono';
+    font-size: 4rem;
+    letter-spacing: 0.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .paul,
+  .baisley {
+    color: black;
+  }
+
+  .job-title {
+    font-size: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .contact-info,
+  .social-links {
+    flex-direction: row;
+  }
+
+  .contact-info {
+    margin-bottom: 1rem;
+  }
+
+  .social-links a {
+    margin-left: 1.5rem;
+    font-weight: bold;
+  }
+
+  .slash-divider {
+    display: block;
+    margin: 0 0.5rem;
+  }
+}
