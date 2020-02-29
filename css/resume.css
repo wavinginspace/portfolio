@@ -64,7 +64,12 @@ p {
 
 .contact-info > * {
   margin-bottom: 0.2rem;
-  font-size: 0.8rem;
+  font-size: .8rem;
+  margin: 0 .5rem .2rem;
+}
+
+.my-email {
+  margin-left: 0;
 }
 
 section {
@@ -92,6 +97,10 @@ section p {
 
 .project-info a {
   margin-right: 0.2rem;
+}
+
+.project-info h4 {
+  font-size: 1.25rem;
 }
 
 .project-info-links {
@@ -157,12 +166,34 @@ h5 {
   font-weight: 500;
 }
 
+/* ----- LAPTOP ----- */
+
 @media (min-width: 768px) {
+
+  body {
+    padding: 4rem;
+  }
   h1 {
     font-family: 'Fira Mono';
     font-size: 4rem;
     letter-spacing: 0.5rem;
     padding-bottom: 1.5rem;
+  }
+
+  h2.job-title {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .experience h4, .education h4, .skills h4, h5 {
+    font-size: 1rem;
+  }
+
+  p { 
+    font-size: 1rem;
   }
 
   .paul,
@@ -175,22 +206,28 @@ h5 {
     padding-bottom: 1.5rem;
   }
 
+  .project-info-links a {
+    font-size: 1rem;
+  }
+
   .contact-info,
   .social-links {
     flex-direction: row;
   }
 
-  .contact-info {
-    margin-bottom: 1rem;
+  .contact-info > * {
+    margin-bottom: .5rem;
+    font-size: 1rem;
   }
 
   .social-links a {
     margin-left: 1.5rem;
     font-weight: bold;
+    font-size: 1.25rem;
   }
 
   .slash-divider {
-    display: block;
+    // display: block;
     margin: 0 0.5rem;
   }
 }
