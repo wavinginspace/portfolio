@@ -13,7 +13,7 @@ function animate() {
     
     return [x, y];
   });
-  ''
+  
   let path = 'M' + points.map(p => {
     return p[0] + ',' + p[1];
   }).join(' L');
