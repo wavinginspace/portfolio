@@ -56,6 +56,16 @@ p {
 .social-links a {
   margin-bottom: 0.5rem;
   font-weight: 400;
+  color: black;
+  text-decoration: none;
+}
+
+a {
+  transition: all .2s ease;
+}
+
+a:hover {
+  color: #ff7676;
 }
 
 .contact-info {
@@ -64,8 +74,7 @@ p {
 
 .contact-info > * {
   margin-bottom: 0.2rem;
-  font-size: .8rem;
-  margin: 0 .5rem .2rem;
+  font-size: 0.8rem;
 }
 
 .my-email {
@@ -99,8 +108,8 @@ section p {
   margin-right: 0.2rem;
 }
 
-.project-info h4 {
-  font-size: 1.25rem;
+.project-info p {
+  margin-bottom: 1rem;
 }
 
 .project-info-links {
@@ -110,6 +119,12 @@ section p {
 .project-info-links a {
   font-size: 0.8rem;
   font-weight: 500;
+  color: #5a46de;
+  transition: all .2s ease;
+}
+
+.project-info-links a:hover {
+  color: #ff7676;
 }
 
 .project-info-links.last {
@@ -166,13 +181,23 @@ h5 {
   font-weight: 500;
 }
 
-/* ----- LAPTOP ----- */
+/* -------------------
+* ------ LAPTOP ------ 
+ --------------------- */
 
 @media (min-width: 768px) {
-
   body {
     padding: 4rem;
   }
+
+  header {
+    margin-bottom: 3rem;
+  }
+
+  section {
+    margin-bottom: 2.5rem;
+  }
+
   h1 {
     font-family: 'Fira Mono';
     font-size: 4rem;
@@ -184,15 +209,31 @@ h5 {
     font-size: 2rem;
   }
 
-  h3 {
+  section h3 {
     font-size: 1.5rem;
+    padding-bottom: 2rem;
   }
 
-  .experience h4, .education h4, .skills h4, h5 {
+  h4,
+  h5 {
     font-size: 1rem;
   }
 
-  p { 
+  .project-info {
+    margin-bottom: .5rem;
+  }
+
+  .project-info h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0rem;
+    font-weight: 500;
+  }
+
+  .project-info p {
+    margin-bottom: 1rem;
+  }
+
+  p {
     font-size: 1rem;
   }
 
@@ -216,8 +257,8 @@ h5 {
   }
 
   .contact-info > * {
-    margin-bottom: .5rem;
     font-size: 1rem;
+    margin: 0 0 0.5rem 0;
   }
 
   .social-links a {
@@ -226,8 +267,17 @@ h5 {
     font-size: 1.25rem;
   }
 
+  .education h4,
+  .experience h4 {
+    font-size: 1rem;
+  }
+
+  .school-description, .job-description {
+    margin-bottom: 1.25rem;
+  }
+
   .slash-divider {
-    // display: block;
-    margin: 0 0.5rem;
+    display: block;
+    margin: 0 1rem;
   }
 }
