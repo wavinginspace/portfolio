@@ -3,15 +3,15 @@ body {
   font-family: 'Fira Mono';
   max-width: 100%;
   overscroll-behavior: none;
-  margin: 0 auto;
-  padding: 1rem;
+  margin: 50px auto 0;
+  padding: 1.5rem;
 }
 
 header {
   position: relative;
   line-height: 1.1;
   border-bottom: 2px solid black;
-  width: 90%;
+  width: 100%;
   margin-bottom: 1.5rem;
 }
 
@@ -61,7 +61,7 @@ p {
 }
 
 a {
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 }
 
 a:hover {
@@ -120,7 +120,7 @@ section p {
   font-size: 0.8rem;
   font-weight: 500;
   color: #5a46de;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 }
 
 .project-info-links a:hover {
@@ -182,6 +182,85 @@ h5 {
 }
 
 /* -------------------
+* ------ NAV ---------
+--------------------*/
+.og-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 50px;
+  border-bottom: 2px solid #222222;
+  font-weight: 500;
+  padding: 0.5rem;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+  background-color: #4899cb;
+}
+
+.navlinks {
+  display: flex;
+}
+
+.homelink {
+  text-transform: uppercase;
+  padding-left: 0.5rem;
+}
+
+.social-logo-svg {
+  width: 24px;
+  height: 24px;
+  fill: #222;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.social-logo-svg:hover {
+  fill: #fffd8f;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+
+.mobile-social-links {
+  display: flex;
+  flex-direction: row;
+}
+
+.navlinks li,
+.social-links li,
+.mobile-social-links li {
+  margin: 0 0.25rem;
+  font-size: 1rem;
+}
+
+.navlinks li a,
+.social-links li a,
+.mobile-social-links li a {
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+  color: #222;
+  text-decoration: none;
+}
+
+.mobile-social-links a:hover,
+.navlinks a:hover,
+social-links li a:hover {
+  color: #fffd8f;
+}
+
+/* -------------------
 * ------ LAPTOP ------ 
  --------------------- */
 
@@ -220,7 +299,7 @@ h5 {
   }
 
   .project-info {
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
 
   .project-info h4 {
@@ -267,12 +346,29 @@ h5 {
     font-size: 1.25rem;
   }
 
+  .navlinks li a {
+    font-size: 1.3rem;
+  }
+
+  .homelink {
+    padding-left: 3rem;
+  }
+
+  .mobile-social-links {
+    padding-right: 1.5rem;
+  }
+
+  .mobile-social-links li a {
+    margin: 0 1rem;
+  }
+
   .education h4,
   .experience h4 {
     font-size: 1rem;
   }
 
-  .school-description, .job-description {
+  .school-description,
+  .job-description {
     margin-bottom: 1.25rem;
   }
 
@@ -280,4 +376,35 @@ h5 {
     display: block;
     margin: 0 1rem;
   }
+}
+
+@media print {
+  nav,
+  .og-nav,
+  .homelink,
+  nav > * {
+    display: none;
+  }
+
+  .og-nav {
+    border: none;
+  }
+
+  body {
+    padding: 1rem 1.5rem;
+  }
+
+  .pagebreak {
+    clear: both;
+    page-break-after: always;
+  }
+
+  .skills {
+    padding-top: 2.5rem;
+  }
+}
+
+@page {
+  size: auto;
+  margin: 0mm;
 }
