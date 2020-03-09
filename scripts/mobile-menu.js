@@ -5,4 +5,3 @@ $('nav').on('click', '.menu-button', function() {
   $('#x-icon').toggleClass('x-icon-closed');
   $('#x-icon').toggleClass('x-icon-open');
 });
-
