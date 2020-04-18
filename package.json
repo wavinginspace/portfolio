@@ -1,0 +1,33 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "demo link: https://paulbaisley.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wavinginspace/portfolio.git"
+  },
+  "keywords": [],
+  "author": "paul baisley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wavinginspace/portfolio/issues"
+  },
+  "homepage": "https://github.com/wavinginspace/portfolio#readme",
+  "dependencies": {
+    "@swup/preload-plugin": "^1.0.3",
+    "@swup/scroll-plugin": "^1.0.6",
+    "babel": "^6.23.0",
+    "parcel": "^1.12.4",
+    "parcel-bundler": "^1.12.4",
+    "path": "^0.12.7",
+    "swup": "^2.0.9",
+    "test": "^0.6.0"
+  },
+  "devDependencies": {
+    "sass": "^1.26.3"
+  }
+}

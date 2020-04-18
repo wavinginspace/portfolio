@@ -1,3 +1,378 @@
 @import 'breakpoints';
 @import 'mixins';
 @import 'variables';
+
+section {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  // border: 1px solid green;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+@include mobilePortrait {
+  h2 {
+    font-size: 3.75rem;
+  }
+}
+
+@include mobileLandscape {
+  h2 {
+    font-size: 4rem;
+  }
+}
+
+@include tabletPortrait {
+  h2 {
+    font-size: 5rem;
+  }
+}
+
+@include tabletLandscape {
+  h2 {
+    font-size: 6rem;
+  }
+}
+
+@include laptop {
+  h2 {
+    font-size: 8rem;
+  }
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+@include mobileLandscape {
+  h3 {
+    font-size: 2.5rem;
+  }
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1fr, 2fr));
+  margin-bottom: 2rem;
+  img {
+    min-width: 50%;
+    box-shadow: 5px 10px 10px 10px rgba(0, 0, 0, 0.03);
+    border: solid var(--nav);
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@include laptop {
+  .projects {
+    padding: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 2fr));
+  }
+
+  .project-2 .project-info-box {
+    grid-column: 2/3;
+    grid-row: 1/3;
+  }
+}
+
+.project-info-box {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+}
+
+@include tabletPortrait {
+  .project-info-box {
+    padding: 1rem 2rem 1.5rem;
+  }
+}
+
+@include laptop {
+  .project-info-box {
+    padding: 2rem 2rem 5rem;
+  }
+}
+
+.project-image-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+@include laptop {
+  .project-image-box {
+    padding: 2rem;
+  }
+}
+
+.project-image {
+  max-width: 100%;
+  width: 70%;
+  transition: transform 5s;
+  margin: 0.75rem auto;
+}
+
+@include mobilePortrait {
+  .project-image {
+    margin: 1.25rem auto;
+  }
+}
+
+.project-image:hover {
+  transform: scale(1.05);
+}
+
+@include laptop {
+  .project-image {
+    max-width: 70%;
+  }
+}
+
+.image-link {
+  @include flexCenter();
+}
+
+.project-title {
+  font-size: 1.5rem;
+  margin: 0 auto 2.5rem;
+  color: var(--outline);
+}
+
+@include mobilePortrait {
+  .project-title {
+    font-size: 2rem;
+  }
+}
+
+@include tabletPortrait {
+  .project-title {
+    font-size: 2.25rem;
+  }
+}
+
+@include laptop {
+  .project-title {
+    font-size: 2.5rem;
+    margin: -2rem auto 3rem;
+  }
+}
+
+.project-desc-text,
+.project-tech-text {
+  font-size: 0.9rem;
+  width: 70%;
+  color: var(--outline);
+  text-align: center;
+}
+
+@include mobilePortrait {
+  .project-desc-text {
+    width: 70%;
+  }
+}
+
+.project-desc-text {
+  margin: 0 auto 1.5rem;
+}
+
+.project-tech-text {
+  margin: 0 auto;
+  text-align: center;
+}
+
+@include mobileLandscape {
+  .project-desc-text,
+  .project-tech-text {
+    font-size: 1rem;
+  }
+}
+
+@include tabletPortrait {
+  .project-desc-text {
+    font-size: 1.25rem;
+    margin: 0.5rem auto 2rem;
+  }
+}
+
+@include laptop {
+  .project-tech-text {
+    font-size: 1.25rem;
+  }
+}
+
+.project-tech-text.laptop {
+  display: none;
+}
+
+@include laptop {
+  .project-tech-text.laptop {
+    display: block;
+    margin-top: 1rem;
+  }
+
+  .project-tech-text.mobile {
+    display: none;
+  }
+}
+
+.link-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+@include mobileLandscape {
+  .link-wrap {
+    margin-top: 0.5rem;
+  }
+}
+
+.project-link {
+  margin: 1rem 2rem;
+  font-size: 1rem;
+}
+
+@include tabletPortrait {
+  .project-link {
+    font-size: 1.25rem;
+    margin: 1.5rem 2.5rem;
+  }
+}
+
+.project-header {
+  margin: 0 auto;
+  @include flexCenter();
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ff5c5c;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+  max-width: 100%;
+  animation: textStretchSmall 40s infinite linear;
+}
+
+@include mobilePortrait {
+  .project-header {
+    animation: textStretchMediumSmall 40s infinite linear;
+  }
+}
+
+@include mobileLandscape {
+  .project-header {
+    animation: textStretchMedium 40s infinite linear;
+  }
+}
+
+@include laptop {
+  .project-header {
+    animation: textStretchLarge 40s infinite linear;
+  }
+}
+
+.project-header-section {
+  height: 100vh;
+  @include flexCenter();
+}
+
+@include laptop {
+  .project-header-section {
+    margin-bottom: 100px;
+  }
+}
+
+@include tabletPortrait {
+  .projects:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// * ABOUT
+
+.about {
+  display: block;
+  padding: 1rem 0 0;
+  text-align: center;
+  height: 100%;
+}
+
+@include tabletPortrait {
+  .about {
+    padding: 2rem 0 0;
+  }
+}
+
+@include laptop {
+  .about {
+    padding: 4rem 0 0;
+  }
+}
+
+.about-title {
+  margin: 2rem auto 3rem;
+  color: var(--outline);
+}
+
+.about-text {
+  display: block;
+  width: 80%;
+  margin: 0 auto 2rem;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  color: var(--outline);
+  text-align: left;
+  text-indent: 1.5rem;
+}
+
+.about-text.end {
+  text-align: center;
+  text-indent: 0;
+}
+
+@include mobilePortrait {
+  .about-text {
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+    width: 70%;
+    text-indent: 2.5rem;
+  }
+}
+
+@include tabletPortrait {
+  .about-text {
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
+}
+
+@include laptop {
+  .about-text {
+    line-height: 1.5rem;
+    max-width: 50%;
+  }
+}
+
+@include tabletLandscape {
+  .about-title {
+    margin: 2rem auto 4rem;
+  }
+
+  .about-text {
+    font-size: 1.25rem;
+    line-height: 1.8rem;
+    width: 60%;
+  }
+}

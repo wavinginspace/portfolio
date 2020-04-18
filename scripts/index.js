@@ -1,1 +1,1 @@
-// import wavify from './waves/wavifyfull.js'
+const swup = new Swup();

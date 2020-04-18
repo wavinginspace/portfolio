@@ -1,3 +1,105 @@
 @import 'breakpoints';
 @import 'mixins';
 @import 'variables';
+
+footer {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+}
+
+.contact-header {
+  position: absolute;
+  top: 45%;
+  z-index: 2;
+  margin: 0 auto;
+  color: white;
+}
+
+.contact-details-links {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.contact-details-links li {
+  display: inline-block;
+  margin: 2rem 1rem;
+}
+
+.social-logo-svg.bottom {
+  width: 24px;
+  height: 24px;
+}
+
+#mail-logo {
+  width: 25px;
+  height: 25px;
+  margin-top: 4px;
+}
+
+@include mobilePortrait {
+  .contact-header {
+    font-size: 2rem;
+  }
+
+  .contact-details-links li {
+    margin: 3.5rem 1.5rem;
+  }
+
+  .social-logo-svg.bottom {
+    width: 32px;
+    height: 32px;
+  }
+
+  #mail-logo {
+    width: 34px;
+    height: 34px;
+    margin-top: 4px;
+  }
+}
+
+@include tabletPortrait {
+  .contact-header {
+    font-size: 2.5rem;
+  }
+
+  .contact-details-links li {
+    margin: 6rem 3.5rem;
+  }
+
+  .social-logo-svg.bottom {
+    width: 48px;
+    height: 48px;
+  }
+
+  #mail-logo {
+    width: 52px;
+    height: 52px;
+    margin-top: 5px;
+  }
+}
+
+@include tabletLandscape {
+  .contact-header {
+    font-size: 3rem;
+  }
+
+  .contact-details-links li {
+    margin: 6rem 3.5rem;
+  }
+
+  .social-logo-svg.bottom {
+    width: 60px;
+    height: 60px;
+  }
+
+  #mail-logo {
+    width: 64px;
+    height: 64px;
+    margin-top: 5px;
+  }
+}
