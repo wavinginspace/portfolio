@@ -13,7 +13,7 @@
 
 <body>
   <svg id="fader"></svg>
-  <script> // immediately 
+  <script> // immediately add .fade-out to fade in page
     function fadeInPage() {
       if (!window.AnimationEvent) { return; }
       let fader = document.getElementById('fader');
@@ -171,9 +171,47 @@
 
       <div class="section-wrap">
 
-        <!-- TODO PROJECT 4 -->
+        <!-- * LANGUAGE TEACHER -->
 
-        <section class="projects project-2">
+        <section class="projects project-odd">
+          <div class="project-info-box">
+            <h3 class="project-title">Language Teacher</h3>
+            <p class="project-desc-text">
+              Language Teacher is an app for learning new languages using spaced-repetition, which asks users to
+              translate words based on how many times they've answered each word correctly or incorrectly. Users can
+              create an account and keep track of their progress. More languages/features coming soon!
+            </p>
+
+            <p class="project-tech-text laptop">
+              Technologies used: React, Node, Express, PostgreSQL, Knex, SCSS, Cypress, Mocha, Zeit, Heroku.
+            </p>
+
+            <div class="tech-icons"></div>
+          </div>
+
+          <div class="project-image-box">
+            <a href="https://language-teacher.now.sh/" target="_blank" class="image-link"><img class="project-image"
+                src="./images/screencaps/language-teacher.png" alt="language teacher app screencap" /></a>
+            <div class="link-wrap">
+              <a class="project-link" href="https://language-teacher.now.sh/" target="_blank">demo</a>
+              <a class="project-link" href="https://github.com/thinkful-ei-leopard/spaced-repetition-paul-matthew"
+                target="_blank">client</a>
+              <a class="project-link" href="https://github.com/thinkful-ei-leopard/spaced-repetition-paul-matthew-api"
+                target="_blank">API</a>
+            </div>
+
+            <p class="project-tech-text mobile">
+              Technologies used: React, Node.js w/ Express, PostgreSQL, Knex, JavaScript ES6, SCSS, Mocha, Chai, Jest,
+              Supertest, Zeit, Heroku.
+            </p>
+          </div>
+        </section>
+
+        <span class="divider project">~</span>
+
+        <!-- * VIDEO STORE -->
+
+        <section class="projects project-even">
           <div class="project-info-box">
             <h3 class="project-title">Video Store</h3>
             <p class="project-desc-text">
@@ -193,7 +231,7 @@
 
           <div class="project-image-box">
             <a href="https://video-store.now.sh/" target="_blank" class="image-link"><img class="project-image"
-                src="./images/screencaps/video-store.png" alt="quiz app screencap" /></a>
+                src="./images/screencaps/video-store.png" alt="video app screencap" /></a>
             <div class="link-wrap">
               <a class="project-link" href="https://video-store.now.sh/" target="_blank">demo</a>
               <a class="project-link" href="https://github.com/wavinginspace/video-store" target="_blank">client</a>
@@ -209,9 +247,9 @@
 
         <span class="divider project">~</span>
 
-        <!-- PROJECT 1 -->
+        <!-- * BOOKMARKS APP -->
 
-        <section class="projects project-1">
+        <section class="projects project-odd">
           <div class="project-info-box">
             <h3 class="project-title">Bookmarks App</h3>
             <p class="project-desc-text">
@@ -243,9 +281,9 @@
 
         <span class="divider project">~</span>
 
-        <!-- TODO PROJECT 2-->
+        <!-- * QUIZ APP -->
 
-        <section class="projects project-2">
+        <section class="projects project-even">
           <div class="project-info-box">
             <h3 class="project-title">Quiz App</h3>
             <p class="project-desc-text">
@@ -277,9 +315,9 @@
 
         <span class="divider project">~</span>
 
-        <!-- TODO PROJECT 3-->
+        <!-- * OBLIQUE STRATEGIES -->
 
-        <section class="projects project-3">
+        <section class="projects project-odd">
           <div class="project-info-box">
             <h3 class="project-title">Oblique Strategies</h3>
 

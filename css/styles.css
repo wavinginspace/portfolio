@@ -463,7 +463,7 @@ h3 {
     -ms-grid-columns: (minmax(600px, 2fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(600px, 2fr));
   }
-  .project-2 .project-info-box {
+  .project-even .project-info-box {
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
     grid-column: 2/3;

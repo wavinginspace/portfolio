@@ -1,14 +1,7 @@
-/*
- *   Wavify
- *   JavaScript library to make some nice waves
- *   by peacepostman @ potion
- */
 function wavify(wave_element, options) {
   if ('undefined' === typeof options) options = {};
 
   //  Options
-  //
-  //
   var settings = Object.assign(
     {},
     {
@@ -22,7 +15,7 @@ function wavify(wave_element, options) {
       // Total number of articulation in wave
       bones: 3,
       // Color
-      color: 'rgba(255,255,255, 0.20)'
+      color: 'rgba(255,255,255, 0.20)',
     },
     options
   );
@@ -38,8 +31,8 @@ function wavify(wave_element, options) {
     animationInstance = false,
     tweenMaxInstance = false;
 
-  //  Allow new settings, avoid setting new container for logic purpose please :)
-  //
+  //  Allow new settings, avoid setting new container for logic purpose
+
   function rebuilSettings(params) {
     settings = Object.assign({}, settings, params);
   }
@@ -64,7 +57,7 @@ function wavify(wave_element, options) {
 
     var cp0 = {
       x: (points[1].x - points[0].x) / 2,
-      y: points[1].y - points[0].y + points[0].y + (points[1].y - points[0].y)
+      y: points[1].y - points[0].y + points[0].y + (points[1].y - points[0].y),
     };
 
     SVGString +=
@@ -88,7 +81,7 @@ function wavify(wave_element, options) {
       var cpLength = Math.sqrt(prevCp.x * prevCp.x + prevCp.y * prevCp.y);
       var cp1 = {
         x: points[i].x - prevCp.x + points[i].x,
-        y: points[i].y - prevCp.y + points[i].y
+        y: points[i].y - prevCp.y + points[i].y,
       };
 
       SVGString +=
@@ -114,8 +107,7 @@ function wavify(wave_element, options) {
   }
 
   //  Draw function
-  //
-  //
+
   function draw() {
     var now = window.Date.now();
 
@@ -128,9 +120,9 @@ function wavify(wave_element, options) {
       var factor = totalTime * Math.PI;
       tweenMaxInstance = TweenMax.to(wave, settings.speed, {
         attr: {
-          d: drawPath(drawPoints(factor))
+          d: drawPath(drawPoints(factor)),
         },
-        ease: Power1.easeInOut
+        ease: Power1.easeInOut,
       });
     } else {
       lastUpdate = now;
@@ -140,15 +132,14 @@ function wavify(wave_element, options) {
   }
 
   //  Pure js debounce function to optimize resize method
-  //
-  //
+
   function debounce(func, wait, immediate) {
     var timeout;
-    return function() {
+    return function () {
       var context = this,
         args = arguments;
       clearTimeout(timeout);
-      timeout = setTimeout(function() {
+      timeout = setTimeout(function () {
         timeout = null;
         if (!immediate) func.apply(context, args);
       }, wait);
@@ -157,8 +148,8 @@ function wavify(wave_element, options) {
   }
 
   //  Redraw for resize with debounce
-  //
-  var redraw = debounce(function() {
+
+  var redraw = debounce(function () {
     pause();
     points = [];
     totalTime = 0;
@@ -210,14 +201,14 @@ function wavify(wave_element, options) {
     }
     tweenMaxInstance = TweenMax.to(wave, parseInt(options.timing), {
       attr: { fill: options.color },
-      onComplete: function() {
+      onComplete: function () {
         if (
           typeof options.onComplete !== undefined &&
           {}.toString.call(options.onComplete) === '[object Function]'
         ) {
           options.onComplete();
         }
-      }
+      },
     });
   }
 
@@ -233,8 +224,8 @@ function wavify(wave_element, options) {
         clearProps: 'all',
         attr: {
           d: 'M0,0',
-          fill: ''
-        }
+          fill: '',
+        },
       });
       window.removeEventListener('resize', redraw);
       animationInstance = false;
@@ -242,7 +233,7 @@ function wavify(wave_element, options) {
   }
 
   //  Boot Wavify
-  //
+
   boot();
 
   return {
@@ -250,6 +241,6 @@ function wavify(wave_element, options) {
     play: play,
     pause: pause,
     kill: kill,
-    updateColor: updateColor
+    updateColor: updateColor,
   };
 }

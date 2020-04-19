@@ -74,7 +74,7 @@ h3 {
     grid-template-columns: repeat(auto-fit, minmax(600px, 2fr));
   }
 
-  .project-2 .project-info-box {
+  .project-even .project-info-box {
     grid-column: 2/3;
     grid-row: 1/3;
   }
