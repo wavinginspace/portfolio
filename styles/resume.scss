@@ -14,7 +14,19 @@ html.is-animating .transition-fade {
 .resume-body {
   font-family: 'Fira Mono';
   overscroll-behavior: none;
+  // width: 80%;
+  // margin: 0 auto;
 }
+
+
+// .resume-animation-container {
+//   display: block;
+//   margin: 0 auto;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;console.log();
+// }
 
 .contact-header {
   line-height: 1.1;
@@ -202,17 +214,22 @@ h5 {
   margin-bottom: 0;
 }
 
-@include tabletLandscape {
+.print-button {
+  display: none;
+}
+
+@include tabletPortrait {
   .print-button {
+    display: block;
     position: absolute;
-    top: 2rem;
-    right: 6rem;
+    top: 1rem;
+    right: 2rem;
     padding: 1rem 3.5rem;
     background-color: var(--headerog);
     color: var(--outline);
     font-weight: bold;
     font-size: 2rem;
-    transition: box-shadow 0.2s;
+    transition: all 0.2s;
     border: 2px solid var(--outline);
     &:hover {
       box-shadow: 3px 3px rgba(0, 0, 0, 0.5);
@@ -441,6 +458,10 @@ h5 {
 
   .skills {
     padding-top: 2.5rem;
+  }
+
+  .print-button {
+    display: none;
   }
 }
 

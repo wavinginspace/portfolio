@@ -217,20 +217,23 @@ h5 {
   margin-bottom: 0;
 }
 
-@media (min-width: 1024px) {
+.print-button {
+  display: none;
+}
+
+@media (min-width: 768px) {
   .print-button {
+    display: block;
     position: absolute;
-    top: 2rem;
-    right: 6rem;
+    top: 1rem;
+    right: 2rem;
     padding: 1rem 3.5rem;
     background-color: var(--headerog);
     color: var(--outline);
     font-weight: bold;
     font-size: 2rem;
-    -webkit-transition: -webkit-box-shadow 0.2s;
-    transition: -webkit-box-shadow 0.2s;
-    transition: box-shadow 0.2s;
-    transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
     border: 2px solid var(--outline);
   }
   .print-button:hover {
@@ -454,6 +457,9 @@ h5 {
   }
   .skills {
     padding-top: 2.5rem;
+  }
+  .print-button {
+    display: none;
   }
 }
 
