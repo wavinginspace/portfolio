@@ -445,6 +445,9 @@ h5 {
   nav > * {
     display: none;
   }
+  .contact-header {
+    margin-top: 2rem;
+  }
   .resume-nav {
     border: none;
   }
@@ -454,6 +457,9 @@ h5 {
   .pagebreak {
     clear: both;
     page-break-after: always;
+  }
+  .last {
+    page-break-after: auto;
   }
   .skills {
     padding-top: 2.5rem;
@@ -466,5 +472,6 @@ h5 {
 @page {
   size: auto;
   margin: 0mm;
+  padding: 0;
 }
 /*# sourceMappingURL=resume.css.map */
