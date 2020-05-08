@@ -1,3 +1,3 @@
-# Paul Baisley's Portfolio
+## Paul Baisley's Portfolio
 
-demo link: https://paulbaisley.com
+link: https://paulbaisley.com

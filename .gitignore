@@ -1,2 +1,5 @@
 *.txt
 .cache
+node_modules
+.vscode
+copy-links.txt
