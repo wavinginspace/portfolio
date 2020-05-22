@@ -68,6 +68,7 @@ h3 {
   }
 }
 
+
 @include laptop {
   .projects {
     padding: 2rem;
@@ -116,8 +117,8 @@ h3 {
 }
 
 .project-image {
-  max-width: 100%;
   width: 70%;
+  max-width: 700px;
   transition: transform 5s;
   margin: 0.75rem auto;
 }
@@ -334,7 +335,7 @@ h3 {
   line-height: 1.2rem;
   color: var(--outline);
   text-align: left;
-  text-indent: 1.5rem;
+  text-indent: 1rem;
 }
 
 .about-text.end {
@@ -347,7 +348,7 @@ h3 {
     font-size: 0.9rem;
     line-height: 1.3rem;
     width: 70%;
-    text-indent: 2.5rem;
+    // text-indent: 2.5rem;
   }
 }
 

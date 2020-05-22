@@ -47,6 +47,10 @@ nav {
   }
 }
 
+.navlinks li:last-child {
+display: none;
+}
+
 @include mobilePortrait {
   .navlinks,
   .social-links {
@@ -54,6 +58,10 @@ nav {
       font-size: 100%;
       margin: 0.7rem;
     }
+  }
+
+  .navlinks li:last-child {
+    display: inline-block;
   }
 }
 

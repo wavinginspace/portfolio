@@ -47,6 +47,7 @@ html.is-animating .transition-fade {
 
 .resume-paragraph {
   font-size: 0.8rem;
+  // margin-bottom: 0;
 }
 
 .job-title {
@@ -121,6 +122,10 @@ html.is-animating .transition-fade {
 .resume-projects p,
 .skills p {
   margin-bottom: 1rem;
+}
+
+.job-description p {
+  margin-bottom: 0;
 }
 
 .resume-project-info a {

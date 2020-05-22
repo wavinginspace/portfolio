@@ -135,6 +135,10 @@ html.is-animating .transition-fade {
   margin-bottom: 1rem;
 }
 
+.job-description p {
+  margin-bottom: 0;
+}
+
 .resume-project-info a {
   margin-right: 0.2rem;
 }

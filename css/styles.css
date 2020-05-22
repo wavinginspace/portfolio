@@ -238,11 +238,18 @@ nav {
   color: var(--light);
 }
 
+.navlinks li:last-child {
+  display: none;
+}
+
 @media (min-width: 480px) {
   .navlinks li,
   .social-links li {
     font-size: 100%;
     margin: 0.7rem;
+  }
+  .navlinks li:last-child {
+    display: inline-block;
   }
 }
 
@@ -527,8 +534,8 @@ h3 {
 }
 
 .project-image {
-  max-width: 100%;
   width: 70%;
+  max-width: 700px;
   -webkit-transition: -webkit-transform 5s;
   transition: -webkit-transform 5s;
   transition: transform 5s;
@@ -783,7 +790,7 @@ h3 {
   line-height: 1.2rem;
   color: var(--outline);
   text-align: left;
-  text-indent: 1.5rem;
+  text-indent: 1rem;
 }
 
 .about-text.end {
@@ -796,7 +803,6 @@ h3 {
     font-size: 0.9rem;
     line-height: 1.3rem;
     width: 70%;
-    text-indent: 2.5rem;
   }
 }
 
