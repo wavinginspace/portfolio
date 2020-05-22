@@ -68,12 +68,14 @@ html.is-animating .transition-fade {
   padding-bottom: 1rem;
 }
 
-.job-position, .program-title {
+.job-position,
+.program-title {
   font-style: italic;
 }
 
 @include tabletPortrait {
-  .job-position, .program-title {
+  .job-position,
+  .program-title {
     font-style: normal;
   }
 }
@@ -86,20 +88,6 @@ html.is-animating .transition-fade {
 
 .slash-divider {
   display: none;
-}
-
-.resume-social-links {
-  position: absolute;
-  right: 0;
-  top: 0.6rem;
-  text-align: right;
-  flex-direction: row;
-}
-
-.resume-social-links a {
-  font-weight: 400;
-  color: black;
-  text-decoration: none;
 }
 
 .resume-link-el {
@@ -153,7 +141,8 @@ html.is-animating .transition-fade {
   margin-bottom: 1rem;
 }
 
-.job-description p, .education p {
+.job-description p,
+.education p {
   margin-bottom: 0;
 }
 
@@ -272,7 +261,7 @@ h5 {
 
 .resume-nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   position: fixed;
   top: 0;
   z-index: 2;
@@ -298,6 +287,35 @@ h5 {
   }
 }
 
+.nav-container {
+  max-width: 990px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+
+@include tabletPortrait {
+  .nav-container {
+    width: 95%;
+  }
+}
+
+.resume-social-links {
+  position: relative;
+  text-align: right;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.resume-social-links a {
+  font-weight: 400;
+  color: black;
+  text-decoration: none;
+}
+
 .resume-navlinks,
 .resume-social-links,
 .mobile-resume-social-links {
@@ -305,7 +323,7 @@ h5 {
   align-items: center;
   li {
     // margin: 0 0.5rem;
-    // font-size: 0.92rem;
+    font-size: 1.2rem;
     a {
       color: var(--outline);
       transition: color 0.2s;
@@ -317,11 +335,19 @@ h5 {
 }
 
 .resume-social-logo-svg {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   fill: var(--outline);
   transition: all 0.2s;
-  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+@include tabletPortrait {
+  .resume-social-logo-svg {
+    margin-left: 2rem;
+    width: 24px;
+    height: 24px;
+  }
 }
 
 .resume-social-logo-svg:hover {
@@ -423,17 +449,13 @@ h5 {
   }
 
   .resume-social-links a {
-    margin-left: 1.5rem;
+    // margin-left: .75rem;
     font-weight: bold;
     font-size: 1.25rem;
   }
 
   .resume-navlinks li a {
     font-size: 1.3rem;
-  }
-
-  .resume-homelink {
-    padding-left: 3rem;
   }
 
   .mobile-resume-social-links {

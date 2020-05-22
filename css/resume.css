@@ -79,12 +79,14 @@ html.is-animating .transition-fade {
   padding-bottom: 1rem;
 }
 
-.job-position, .program-title {
+.job-position,
+.program-title {
   font-style: italic;
 }
 
 @media (min-width: 768px) {
-  .job-position, .program-title {
+  .job-position,
+  .program-title {
     font-style: normal;
   }
 }
@@ -102,23 +104,6 @@ html.is-animating .transition-fade {
 
 .slash-divider {
   display: none;
-}
-
-.resume-social-links {
-  position: absolute;
-  right: 0;
-  top: 0.6rem;
-  text-align: right;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.resume-social-links a {
-  font-weight: 400;
-  color: black;
-  text-decoration: none;
 }
 
 .resume-link-el {
@@ -173,7 +158,8 @@ html.is-animating .transition-fade {
   margin-bottom: 1rem;
 }
 
-.job-description p, .education p {
+.job-description p,
+.education p {
   margin-bottom: 0;
 }
 
@@ -296,9 +282,9 @@ h5 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: fixed;
   top: 0;
   z-index: 2;
@@ -327,6 +313,48 @@ h5 {
   }
 }
 
+.nav-container {
+  max-width: 990px;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .nav-container {
+    width: 95%;
+  }
+}
+
+.resume-social-links {
+  position: relative;
+  text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.resume-social-links a {
+  font-weight: 400;
+  color: black;
+  text-decoration: none;
+}
+
 .resume-navlinks,
 .resume-social-links,
 .mobile-resume-social-links {
@@ -336,6 +364,12 @@ h5 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.resume-navlinks li,
+.resume-social-links li,
+.mobile-resume-social-links li {
+  font-size: 1.2rem;
 }
 
 .resume-navlinks li a,
@@ -353,12 +387,20 @@ h5 {
 }
 
 .resume-social-logo-svg {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   fill: var(--outline);
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .resume-social-logo-svg {
+    margin-left: 2rem;
+    width: 24px;
+    height: 24px;
+  }
 }
 
 .resume-social-logo-svg:hover {
@@ -451,15 +493,11 @@ h5 {
     margin: 0 0 0.5rem 0;
   }
   .resume-social-links a {
-    margin-left: 1.5rem;
     font-weight: bold;
     font-size: 1.25rem;
   }
   .resume-navlinks li a {
     font-size: 1.3rem;
-  }
-  .resume-homelink {
-    padding-left: 3rem;
   }
   .mobile-resume-social-links {
     padding-right: 1.5rem;
