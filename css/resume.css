@@ -307,12 +307,6 @@ h5 {
   }
 }
 
-@media (min-width: 1024px) {
-  .resume-nav {
-    padding: 1.5rem;
-  }
-}
-
 .nav-container {
   max-width: 990px;
   width: 90%;
@@ -330,7 +324,7 @@ h5 {
 
 @media (min-width: 768px) {
   .nav-container {
-    width: 95%;
+    width: 93%;
   }
 }
 
