@@ -14,7 +14,6 @@ html.is-animating .transition-fade {
 .resume-body {
   font-family: 'Fira Mono';
   overscroll-behavior: none;
-  // width: 80%;
 }
 
 .resume-container {
@@ -278,12 +277,6 @@ h5 {
 @include mobilePortrait {
   .resume-nav {
     padding: 1rem;
-  }
-}
-
-@include tabletLandscape {
-  .resume-nav {
-    // padding: 1.5rem;
   }
 }
 
