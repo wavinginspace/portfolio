@@ -59,3 +59,12 @@ p {
 }
 
 // * EXTRAS
+
+.melt svg path {
+  z-index: 5;
+  animation: melty 5s ease 0s infinite alternate both;
+}
+
+@keyframes melty {
+  100% {transform: scaleY(1.25)}
+}

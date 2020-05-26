@@ -1155,4 +1155,24 @@ p {
     font-size: 1.5rem;
   }
 }
+
+.melt svg path {
+  z-index: 5;
+  -webkit-animation: melty 5s ease 0s infinite alternate both;
+          animation: melty 5s ease 0s infinite alternate both;
+}
+
+@-webkit-keyframes melty {
+  100% {
+    -webkit-transform: scaleY(1.25);
+            transform: scaleY(1.25);
+  }
+}
+
+@keyframes melty {
+  100% {
+    -webkit-transform: scaleY(1.25);
+            transform: scaleY(1.25);
+  }
+}
 /*# sourceMappingURL=styles.css.map */

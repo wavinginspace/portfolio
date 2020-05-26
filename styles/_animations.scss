@@ -1,3 +1,5 @@
+// * PAGE TRANSITION ANIMATION
+
 @keyframes fade-out {
   from { opacity: 1 }
     to { opacity: 0 }
@@ -17,6 +19,8 @@
   opacity: 1;
   animation-name: fade-in;
 }
+
+// PROJECTS HEADER ANIMATE
 
 
 @keyframes textStretchSmall {
@@ -74,3 +78,5 @@
     letter-spacing: 0;
   }
 }
+
+
