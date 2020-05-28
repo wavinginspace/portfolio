@@ -66,5 +66,7 @@ p {
 }
 
 @keyframes melty {
-  100% {transform: scaleY(1.25)}
+  100% {
+    transform: scaleY(1.25);
+  }
 }
