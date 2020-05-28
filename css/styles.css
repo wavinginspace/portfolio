@@ -4,6 +4,7 @@
   --headergrad: linear-gradient(0deg, #ff7676, #fffd8f);
   --light: #fffd8f;
   --headerog: #ff7676;
+  --links: rgb(64, 122, 125);
 }
 
 .wave {
@@ -170,6 +171,7 @@
   --headergrad: linear-gradient(0deg, #ff7676, #fffd8f);
   --light: #fffd8f;
   --headerog: #ff7676;
+  --links: rgb(64, 122, 125);
 }
 
 nav {
@@ -325,6 +327,7 @@ nav {
   --headergrad: linear-gradient(0deg, #ff7676, #fffd8f);
   --light: #fffd8f;
   --headerog: #ff7676;
+  --links: rgb(64, 122, 125);
 }
 
 header {
@@ -361,6 +364,28 @@ header {
 
 .resume-link {
   color: var(--outline);
+  position: relative;
+}
+
+.resume-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--outline);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 250ms ease-in;
+  transition: -webkit-transform 250ms ease-in;
+  transition: transform 250ms ease-in;
+  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
+}
+
+.resume-link:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 @media (min-width: 640px) {
@@ -388,6 +413,7 @@ header {
   --headergrad: linear-gradient(0deg, #ff7676, #fffd8f);
   --light: #fffd8f;
   --headerog: #ff7676;
+  --links: rgb(64, 122, 125);
 }
 
 section {
@@ -682,6 +708,31 @@ h3 {
 .project-link {
   margin: 1rem 2rem;
   font-size: 1rem;
+  position: relative;
+  color: var(--links);
+}
+
+.project-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: -webkit-transform 250ms ease-in;
+  transition: -webkit-transform 250ms ease-in;
+  transition: transform 250ms ease-in;
+  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
+}
+
+.project-link:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 @media (min-width: 768px) {
@@ -837,6 +888,7 @@ h3 {
   --headergrad: linear-gradient(0deg, #ff7676, #fffd8f);
   --light: #fffd8f;
   --headerog: #ff7676;
+  --links: rgb(64, 122, 125);
 }
 
 footer {
@@ -946,6 +998,7 @@ footer {
   --headergrad: linear-gradient(0deg, #ff7676, #fffd8f);
   --light: #fffd8f;
   --headerog: #ff7676;
+  --links: rgb(64, 122, 125);
 }
 
 #fader {
@@ -1136,10 +1189,6 @@ main {
 
 a {
   text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
 }
 
 em {

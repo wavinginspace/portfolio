@@ -4,6 +4,7 @@
   --headergrad: linear-gradient(0deg, #ff7676, #fffd8f);
   --light: #fffd8f;
   --headerog: #ff7676;
+  --links: rgb(64, 122, 125);
 }
 
 .transition-fade {

@@ -31,6 +31,24 @@ header {
 
 .resume-link {
   color: var(--outline);
+  position: relative;
+}
+
+.resume-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--outline);
+  transform: scaleX(0);
+  // transform-origin: left;
+  transition: transform 250ms ease-in;
+}
+
+.resume-link:hover::after {
+  transform: scaleX(1);
 }
 
 @include mobileLandscape {
