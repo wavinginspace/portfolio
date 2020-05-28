@@ -4,7 +4,7 @@
   --headergrad: linear-gradient(0deg, #ff7676, #fffd8f);
   --light: #fffd8f;
   --headerog: #ff7676;
-  --links: rgb(64, 122, 125);
+  --links: #6757d0;
 }
 
 .transition-fade {
@@ -20,6 +20,7 @@ html.is-animating .transition-fade {
 .resume-body {
   font-family: 'Fira Mono';
   overscroll-behavior: none;
+  color: var(--outline);
 }
 
 .resume-container {
@@ -39,7 +40,7 @@ html.is-animating .transition-fade {
 
 .contact-header {
   line-height: 1.1;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--outline);
   width: 100%;
   width: 85%;
   margin: 5rem auto 1rem;
@@ -110,10 +111,11 @@ html.is-animating .transition-fade {
 .resume-link-el {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
+  color: var(--links);
 }
 
 .resume-link-el:hover {
-  color: #ff7676;
+  color: var(--headerog);
 }
 
 .resume-contact-info {
@@ -179,13 +181,13 @@ html.is-animating .transition-fade {
 .resume-project-info-links a {
   font-size: 0.8rem;
   font-weight: 500;
-  color: #5a46de;
+  color: var(--links);
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
 .resume-project-info-links a:hover {
-  color: #ff7676;
+  color: var(--headerog);
 }
 
 .resume-project-info-links.last {
@@ -467,7 +469,7 @@ h5 {
   }
   .paul,
   .baisley {
-    color: black;
+    color: var(--outline);
   }
   .job-title {
     font-size: 1.5rem;
