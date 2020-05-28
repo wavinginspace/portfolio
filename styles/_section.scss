@@ -258,12 +258,13 @@ h3 {
   height: 2px;
   background: currentColor;
   transform: scaleX(0);
-  transform-origin: left;
+  transform-origin: right;
   transition: transform 250ms ease-in;
 }
 
 .project-link:hover::after {
   transform: scaleX(1);
+  transform-origin: left;
 }
 
 @include tabletPortrait {
