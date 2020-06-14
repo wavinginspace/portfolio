@@ -68,7 +68,6 @@ h3 {
   }
 }
 
-
 @include laptop {
   .projects {
     padding: 2rem;
@@ -242,14 +241,20 @@ h3 {
   }
 }
 
-.project-link {
+.project-link{
   margin: 1rem 2rem;
   font-size: 1rem;
   position: relative;
-  color: var(--links)
+  color: var(--links);
 }
 
-.project-link::after {
+.bio-link {
+  color: var(--links);
+  position: relative;
+}
+
+.project-link::after,
+.bio-link::after {
   content: '';
   position: absolute;
   left: 0;
@@ -262,7 +267,8 @@ h3 {
   transition: transform 250ms ease-in;
 }
 
-.project-link:hover::after {
+.project-link:hover::after,
+.bio-link:hover::after {
   transform: scaleX(1);
   transform-origin: left;
 }

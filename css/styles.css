@@ -712,7 +712,13 @@ h3 {
   color: var(--links);
 }
 
-.project-link::after {
+.bio-link {
+  color: var(--links);
+  position: relative;
+}
+
+.project-link::after,
+.bio-link::after {
   content: '';
   position: absolute;
   left: 0;
@@ -730,7 +736,8 @@ h3 {
   transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
 }
 
-.project-link:hover::after {
+.project-link:hover::after,
+.bio-link:hover::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
   -webkit-transform-origin: left;
