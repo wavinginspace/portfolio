@@ -356,10 +356,45 @@ header {
 }
 
 .name-header {
+  opacity: 0;
   font-size: 2rem;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
   color: var(--outline);
+  -webkit-animation: soft-fade 1.5s ease-in-out .25s forwards;
+          animation: soft-fade 1.5s ease-in-out .25s forwards;
+}
+
+.intro-text {
+  opacity: 0;
+  -webkit-animation: soft-fade 1.5s ease-in-out 1s forwards;
+          animation: soft-fade 1.5s ease-in-out 1s forwards;
+}
+
+@-webkit-keyframes soft-fade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes soft-fade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
 .resume-link {

@@ -23,11 +23,25 @@ header {
 }
 
 .name-header {
+  opacity: 0;
   font-size: 2rem;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
   color: var(--outline);
+  animation: soft-fade 1.5s ease-in-out .25s forwards;
 }
+
+.intro-text {
+  opacity: 0;
+  animation: soft-fade 1.5s ease-in-out 1s forwards;
+}
+
+@keyframes soft-fade {
+  from {opacity: 0; transform: translateY(10px)}
+  to {opacity: 1; transform: translateY(0)}
+}
+
+
 
 .resume-link {
   color: var(--outline);
