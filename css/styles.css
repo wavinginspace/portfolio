@@ -1251,8 +1251,8 @@ p {
 
 .melt svg path {
   z-index: 5;
-  -webkit-animation: melty 5s ease 0s infinite alternate both;
-          animation: melty 5s ease 0s infinite alternate both;
+  -webkit-animation: melty 3s ease-in-out 0s infinite alternate both;
+          animation: melty 3s ease-in-out 0s infinite alternate both;
 }
 
 @-webkit-keyframes melty {
