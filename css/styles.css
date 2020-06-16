@@ -748,7 +748,8 @@ h3 {
   color: var(--links);
 }
 
-.bio-link {
+.bio-link,
+.project-desc-ext-link {
   color: var(--links);
   position: relative;
 }
@@ -774,6 +775,50 @@ h3 {
 
 .project-link:hover::after,
 .bio-link:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.bio-link.label,
+.project-desc-ext-link {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  margin-left: -16px;
+}
+
+.bio-link.label::after,
+.project-desc-ext-link::after {
+  content: '';
+  position: absolute;
+  left: 16px;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform 250ms ease-in;
+  transition: -webkit-transform 250ms ease-in;
+  transition: transform 250ms ease-in;
+  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
+}
+
+.project-desc-ext-link {
+  margin-left: 0;
+}
+
+.project-desc-ext-link::after {
+  left: 0;
+  bottom: 2px;
+}
+
+.bio-link.label:hover::after,
+.project-desc-ext-link:hover::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
   -webkit-transform-origin: left;
