@@ -170,13 +170,14 @@ h3 {
 .project-desc-text,
 .project-tech-text {
   font-size: 0.9rem;
-  width: 70%;
+  width: 80%;
   color: var(--outline);
   text-align: center;
 }
 
 @include mobilePortrait {
-  .project-desc-text {
+  .project-desc-text,
+  .project-tech-text {
     width: 70%;
   }
 }
@@ -241,7 +242,7 @@ h3 {
   }
 }
 
-.project-link{
+.project-link {
   margin: 1rem 2rem;
   font-size: 1rem;
   position: relative;

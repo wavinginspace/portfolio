@@ -661,13 +661,14 @@ h3 {
 .project-desc-text,
 .project-tech-text {
   font-size: 0.9rem;
-  width: 70%;
+  width: 80%;
   color: var(--outline);
   text-align: center;
 }
 
 @media (min-width: 480px) {
-  .project-desc-text {
+  .project-desc-text,
+  .project-tech-text {
     width: 70%;
   }
 }
