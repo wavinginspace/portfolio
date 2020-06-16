@@ -817,6 +817,11 @@ h3 {
   bottom: 2px;
 }
 
+.bio-link.label::after {
+  bottom: 0;
+  width: 88%;
+}
+
 .bio-link.label:hover::after,
 .project-desc-ext-link:hover::after {
   -webkit-transform: scaleX(1);
