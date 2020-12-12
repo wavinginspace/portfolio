@@ -14,29 +14,22 @@ html.is-animating .transition-fade {
 .resume-body {
   font-family: 'Fira Mono';
   overscroll-behavior: none;
-  color: var(--outline);
-}
-
-.resume-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
+  // width: 80%;
+  // margin: 0 auto;
 }
 
 .contact-header {
   line-height: 1.1;
-  border-bottom: 2px solid var(--outline);
+  border-bottom: 2px solid black;
   width: 100%;
-  width: 85%;
-  margin: 5rem auto 1rem;
+  width: 90%;
+  margin: 5rem auto 1rem 1.5rem;
   position: relative;
 }
 
 @include tabletPortrait {
   .contact-header {
-    width: 90%;
+    margin: 5rem auto 1rem 4rem;
   }
 }
 
@@ -46,8 +39,8 @@ html.is-animating .transition-fade {
 }
 
 .resume-main {
-  width: 85%;
-  padding: 1.5rem 0;
+  width: 90%;
+  padding: 1.5rem;
 }
 
 .resume-name {
@@ -60,24 +53,11 @@ html.is-animating .transition-fade {
 
 .resume-paragraph {
   font-size: 0.8rem;
-  max-width: 1000px;
 }
 
 .job-title {
   font-size: 1.2rem;
   padding-bottom: 1rem;
-}
-
-.job-position,
-.program-title {
-  font-style: italic;
-}
-
-@include tabletPortrait {
-  .job-position,
-  .program-title {
-    font-style: normal;
-  }
 }
 
 .resume-contact-info,
@@ -90,13 +70,26 @@ html.is-animating .transition-fade {
   display: none;
 }
 
+.resume-social-links {
+  position: absolute;
+  right: 0;
+  top: 0.6rem;
+  text-align: right;
+  flex-direction: row;
+}
+
+.resume-social-links a {
+  font-weight: 400;
+  color: black;
+  text-decoration: none;
+}
+
 .resume-link-el {
   transition: all 0.2s ease;
-  color: var(--links);
 }
 
 .resume-link-el:hover {
-  color: var(--headerog);
+  color: #ff7676;
 }
 
 .resume-contact-info {
@@ -113,13 +106,7 @@ html.is-animating .transition-fade {
 }
 
 .resume-section {
-  padding-bottom: 2rem;
-}
-
-@include tabletPortrait {
-  .resume-section {
-    padding-bottom: 0;
-  }
+  padding-bottom: 1.5rem;
 }
 
 .resume-section h3 {
@@ -142,11 +129,6 @@ html.is-animating .transition-fade {
   margin-bottom: 1rem;
 }
 
-.job-description p,
-.education p {
-  margin-bottom: 0;
-}
-
 .resume-project-info a {
   margin-right: 0.2rem;
 }
@@ -162,12 +144,12 @@ html.is-animating .transition-fade {
 .resume-project-info-links a {
   font-size: 0.8rem;
   font-weight: 500;
-  color: var(--links);
+  color: #5a46de;
   transition: all 0.2s ease;
 }
 
 .resume-project-info-links a:hover {
-  color: var(--headerog);
+  color: #ff7676;
 }
 
 .resume-project-info-links.last {
@@ -262,7 +244,7 @@ h5 {
 
 .resume-nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   z-index: 2;
@@ -273,42 +255,14 @@ h5 {
   background-color: var(--nav);
   font-weight: 500;
   padding: 0.5rem;
+  padding-left: 1.5rem;
   transition: background-color 0.2s;
 }
 
-@include mobilePortrait {
+@include tabletLandscape {
   .resume-nav {
-    padding: 1rem;
+    padding: 1.5rem;
   }
-}
-
-.nav-container {
-  max-width: 990px;
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0;
-}
-
-@include tabletPortrait {
-  .nav-container {
-    width: 93%;
-  }
-}
-
-.resume-social-links {
-  position: relative;
-  text-align: right;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-}
-
-.resume-social-links a {
-  font-weight: 400;
-  color: black;
-  text-decoration: none;
 }
 
 .resume-navlinks,
@@ -317,7 +271,8 @@ h5 {
   display: flex;
   align-items: center;
   li {
-    font-size: 1.2rem;
+    // margin: 0 0.5rem;
+    // font-size: 0.92rem;
     a {
       color: var(--outline);
       transition: color 0.2s;
@@ -329,19 +284,11 @@ h5 {
 }
 
 .resume-social-logo-svg {
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   fill: var(--outline);
   transition: all 0.2s;
-  margin-left: 1.5rem;
-}
-
-@include tabletPortrait {
-  .resume-social-logo-svg {
-    margin-left: 2rem;
-    width: 24px;
-    height: 24px;
-  }
+  margin-right: 1.5rem;
 }
 
 .resume-social-logo-svg:hover {
@@ -365,10 +312,9 @@ h5 {
 * ------ LAPTOP ------ 
  --------------------- */
 
-@include tabletPortrait {
+@media (min-width: 768px) {
   .resume-main {
-    width: 90%;
-    padding: 3rem 0;
+    padding: 4rem;
   }
 
   .resume-header {
@@ -420,7 +366,7 @@ h5 {
 
   .paul,
   .baisley {
-    color: var(--outline);
+    color: black;
   }
 
   .job-title {
@@ -443,13 +389,17 @@ h5 {
   }
 
   .resume-social-links a {
-    // margin-left: .75rem;
+    margin-left: 1.5rem;
     font-weight: bold;
     font-size: 1.25rem;
   }
 
   .resume-navlinks li a {
     font-size: 1.3rem;
+  }
+
+  .resume-homelink {
+    padding-left: 2.75rem;
   }
 
   .mobile-resume-social-links {
@@ -520,5 +470,13 @@ h5 {
   padding: 0;
 }
 
+// // * SWUP ANIMATIONS
 
+// .transition-fade {
+//   transition: 0.4s;
+//   opacity: 1;
+// }
 
+// html.is-animating .transition-fade {
+//   opacity: 0;
+// }
