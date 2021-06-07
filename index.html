@@ -79,14 +79,6 @@
       <button aria-label="cancel button" class="menu-button">
         <svg class="x-icon x-icon-closed" id="x-icon" xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve">
-          <style type="text/css">
-            .st0 {
-              stroke-width: 2;
-              stroke-linecap: round;
-              stroke-linejoin: round;
-            }
-
-          </style>
           <line class="st0" x1="18" y1="6" x2="6" y2="18" />
           <line class="st0" x1="6" y1="6" x2="18" y2="18" />
         </svg>
@@ -164,7 +156,7 @@
 
       <!-- SVG WAVE -->
       <div class="melt">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"> class="melty-svg"
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="melty-svg">
           <path fill="#FF7676" fill-opacity="1"
             d="M0,192L17.1,202.7C34.3,213,69,235,103,218.7C137.1,203,171,149,206,154.7C240,160,274,224,309,224C342.9,224,377,160,411,133.3C445.7,107,480,117,514,149.3C548.6,181,583,235,617,229.3C651.4,224,686,160,720,117.3C754.3,75,789,53,823,48C857.1,43,891,53,926,85.3C960,117,994,171,1029,202.7C1062.9,235,1097,245,1131,218.7C1165.7,192,1200,128,1234,106.7C1268.6,85,1303,107,1337,128C1371.4,149,1406,171,1423,181.3L1440,192L1440,0L1422.9,0C1405.7,0,1371,0,1337,0C1302.9,0,1269,0,1234,0C1200,0,1166,0,1131,0C1097.1,0,1063,0,1029,0C994.3,0,960,0,926,0C891.4,0,857,0,823,0C788.6,0,754,0,720,0C685.7,0,651,0,617,0C582.9,0,549,0,514,0C480,0,446,0,411,0C377.1,0,343,0,309,0C274.3,0,240,0,206,0C171.4,0,137,0,103,0C68.6,0,34,0,17,0L0,0Z">
           </path>
@@ -177,9 +169,49 @@
 
       <div class="section-wrap">
 
+        <!-- * RECLAIM JUSTCE -->
+
+        <section class="project project-odd">
+          <div class="project-info-box">
+            <h3 class="project-title">Reclaim Justice</h3>
+            <p class="project-desc-text">
+              The
+              <a target="_blank" href="https://reclaimjusticemovement.org/" class="project-link">Reclaim Justice
+                Movement</a> is a VA-based organization that focuses on
+              community-oriented alternatives to
+              the criminal justice system through restorative and transformative justice. I designed and developed a
+              customized site for RJM using Gatsby for the front-end and Sanity for the back-end, which allows them to
+              make blog posts and edit page content as they see fit. The site allows leverages serverless functions for
+              collecting e-mails and sending automated responses using Sendgrid's API.
+            </p>
+
+            <p class="project-tech-text laptop">
+              Technologies used: React w/ Gatsby, Sanity, GraphQl, Node.js, Styled Components, Sendgrid, Netlify, Zapier
+            </p>
+
+            <div class="tech-icons"></div>
+          </div>
+
+          <div class="project-image-box">
+            <a href="https://reclaimjusticemovement.org/" target="_blank" class="image-link">
+              <img class="project-image" loading="lazy" src="./images/screencaps/reclaimjustice.png"
+                alt="reclaim justice screencap" />
+            </a>
+            <div class="link-wrap">
+              <a class="project-link" href="https://reclaimjusticemovement.org/" target="_blank">site</a>
+            </div>
+
+            <p class="project-tech-text mobile">
+              Technologies used: React w/ Gatsby, Sanity, GraphQl, Node.js, Styled Components, Sendgrid, Netlify, Zapier
+            </p>
+          </div>
+        </section>
+
+        <span class="divider project">~</span>
+
         <!-- ** CUP OF SUGAR -->
 
-        <section class="projects project-even">
+        <section class="project project-even">
           <div class="project-info-box">
             <h3 class="project-title">Cup of Sugar</h3>
             <p class="project-desc-text">
@@ -196,8 +228,10 @@
           </div>
 
           <div class="project-image-box">
-            <a href="https://cup-of-sugar.now.sh/" target="_blank" class="image-link"><img class="project-image"
-                src="./images/screencaps/cupofsugar1.png" alt="cup of sugar app screencap" /></a>
+            <a href="https://cup-of-sugar.now.sh/" target="_blank" class="image-link">
+              <img class="project-image" loading="lazy" src="./images/screencaps/cupofsugar1.png"
+                alt="cup of sugar app screencap" />
+            </a>
             <div class="link-wrap">
               <a class="project-link" href="https://cup-of-sugar.now.sh/" target="_blank">demo</a>
               <a class="project-link" href="https://github.com/thinkful-ei-leopard/cup-of-sugar-client"
@@ -207,7 +241,8 @@
             </div>
 
             <p class="project-tech-text mobile">
-              Technologies used: React, Node.js w/ Express, PostgreSQL, Knex, JavaScript ES6, SASS/SCSS, Mocha, Chai, Jest,
+              Technologies used: React, Node.js w/ Express, PostgreSQL, Knex, JavaScript ES6, SASS/SCSS, Mocha, Chai,
+              Jest,
               Supertest, Zeit, Heroku.
             </p>
           </div>
@@ -217,7 +252,7 @@
 
         <!-- ***  ASTRO 3D -->
 
-        <section class="projects project-odd">
+        <section class="project project-odd">
           <div class="project-info-box">
             <h3 class="project-title">Astro Nautico</h3>
             <p class="project-desc-text">
@@ -235,8 +270,10 @@
           </div>
 
           <div class="project-image-box">
-            <a href="https://www.astronauti.co/" target="_blank" class="image-link"><img class="project-image"
-                src="./images/screencaps/astro3d.png" alt="video app screencap" /></a>
+            <a href="https://www.astronauti.co/" target="_blank" class="image-link">
+              <img class="project-image" loading="lazy" src="./images/screencaps/astro3d.png"
+                alt="video app screencap" />
+            </a>
             <div class="link-wrap">
               <a class="project-link" href="https://www.astronauti.co/" target="_blank">demo</a>
               <a class="project-link" href="https://github.com/wavinginspace/astro-3d" target="_blank">repo</a>
@@ -252,7 +289,7 @@
 
         <!-- * LANGUAGE TEACHER -->
 
-        <section class="projects project-even">
+        <section class="project project-even">
           <div class="project-info-box">
             <h3 class="project-title">Language Teacher</h3>
             <p class="project-desc-text">
@@ -269,8 +306,10 @@
           </div>
 
           <div class="project-image-box">
-            <a href="https://language-teacher.now.sh/" target="_blank" class="image-link"><img class="project-image"
-                src="./images/screencaps/language-teacher.png" alt="language teacher app screencap" /></a>
+            <a href="https://language-teacher.now.sh/" target="_blank" class="image-link">
+              <img class="project-image" src="./images/screencaps/language-teacher.png" loading="lazy"
+                alt="language teacher app screencap" />
+            </a>
             <div class="link-wrap">
               <a class="project-link" href="https://language-teacher.now.sh/" target="_blank">demo</a>
               <a class="project-link" href="https://github.com/thinkful-ei-leopard/spaced-repetition-paul-matthew"
@@ -280,7 +319,8 @@
             </div>
 
             <p class="project-tech-text mobile">
-              Technologies used: React, Node.js w/ Express, PostgreSQL, Knex, JavaScript ES6, SCSS, Mocha, Chai, Jest,
+              Technologies used: React, Node.js w/ Express, PostgreSQL, Knex, JavaScript ES6, SCSS, Mocha, Chai,
+              Jest,
               Supertest, Zeit, Heroku.
             </p>
           </div>
@@ -395,7 +435,6 @@
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
               y="0px" class="social-logo-svg bottom" id="mail-logo" viewBox="0 0 512 512"
               style="enable-background:new 0 0 512 512;" xml:space="preserve">
-              <style type="text/css"></style>
               <g>
                 <g>
                   <path class="st0" d="M467,61H45C20.2,61,0,81.2,0,106v300c0,24.7,20.1,45,45,45h422c24.7,0,45-20.1,45-45V106
@@ -403,7 +442,8 @@
                 l50.7,50.2c5.9,5.8,15.3,5.8,21.2,0l49.4-49.4L460.8,421H51.2z M482,399.8L338.2,256L482,112.2V399.8z" />
                 </g>
               </g>
-            </svg></a>
+            </svg>
+          </a>
         </li>
 
         <li>
