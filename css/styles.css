@@ -250,6 +250,9 @@ nav {
     font-size: 100%;
     margin: 0.7rem;
   }
+  .social-links {
+    margin-right: .5rem;
+  }
   .navlinks li:last-child {
     display: inline-block;
   }
@@ -1268,6 +1271,30 @@ footer {
 html {
   scroll-behavior: smooth;
   overscroll-behavior: none;
+  scrollbar-width: thin;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Source Code Pro', monospace;
+  max-width: 100%;
+  overscroll-behavior: none;
+  overflow: overlay;
+}
+
+body::-webkit-scrollbar {
+  background: black;
+  width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--light)), to(var(--headerog)));
+  background-image: linear-gradient(var(--light), var(--headerog));
+  background-color: var(--light);
+  -webkit-box-shadow: 0 -100vh 60px 100vh var(--light);
+          box-shadow: 0 -100vh 60px 100vh var(--light);
 }
 
 .transition-fade {
@@ -1278,13 +1305,6 @@ html {
 
 html.is-animating .transition-fade {
   opacity: 0;
-}
-
-body {
-  font-size: 16px;
-  font-family: 'Source Code Pro', monospace;
-  max-width: 100%;
-  overscroll-behavior: none;
 }
 
 main {
