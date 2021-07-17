@@ -7,7 +7,7 @@
   <title>Paul Baisley Resume</title>
   <link rel="stylesheet" href="./css/base.css" />
   <link rel="stylesheet" href="./css/resume.css" />
-  <link href="https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700&display=swap" rel="preload" />
   <link rel="icon" type="image/png" href="./images/icons/logo1.png" />
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" defer></script>
@@ -73,7 +73,7 @@
           <br />
           <span class="baisley">Baisley</span>
         </h1>
-        <h2 class="job-title">Software Engineer</h2>
+        <h2 class="job-title">Front-End Developer</h2>
 
         <div class="resume-contact-info">
           <a class="my-email resume-link-el" href="mailto:paulbaisley@gmail.com" target="_blank">
@@ -83,11 +83,9 @@
           <p class="resume-paragraph">631-766-5550</p>
           <span class="slash-divider contact">//</span>
           <p class="resume-paragraph">Philadelphia, PA</p>
-          <button class="print-button">
-            <p>
-              Print
-            </p>
-          </button>
+          <a href="/paulbaisleyresume.pdf" class="download-button" download>
+            <p>Download</p>
+          </a>
       </section>
 
       <main class="resume-main">
@@ -102,12 +100,195 @@
           </p>
         </section>
 
+        <section class="experience resume-section">
+          <h3>Experience</h3>
+
+          <div class="job-description">
+            <h4>
+              LocalHarvest (Contract)
+            </h4>
+            <h5 class="job-position">
+              UI Developer – Remote - 7/2020-5/2021
+            </h5>
+            <p class="resume-paragraph">
+              ► Redesigned and updated UI for 150+ page farm-management software built with Java/JSP/SQL
+            </p>
+            <p class="resume-paragraph">
+              ► Wrote and organized modular/responsive CSS with SASS + Bootstrap
+            </p>
+            <p class="resume-paragraph">
+              ► Implemented libraries and wrote custom scripts for new features
+            </p>
+            <p class="resume-paragraph">
+              ► Cleaned up legacy code, replaced with modern best practices
+            </p>
+          </div>
+
+          <div class="job-description">
+            <h4>
+              wavinginspace
+            </h4>
+            <h5 class="job-position">
+              Freelancer - NY/Philadelphia - 2010-Present
+            </h5>
+            <p class="resume-paragraph">
+              ► Designing and building custom websites and content management systems for clients leveraging modern best
+              practices
+            </p>
+            <p class="resume-paragraph">
+              ► Designing logos, prints, style guides, merchandise
+            </p>
+            <p>
+              ► Clients include Reclaim Justice Movement, Schubert B2B, and We The People Opportunity Farm
+            </p>
+          </div>
+
+          <div class="job-description">
+            <h4>
+              Schubert B2B (Contract)
+            </h4>
+            <h5 class="job-position">
+              Web Developer - Philadelphia/Remote - 2020
+            </h5>
+            <p class="resume-paragraph">
+              ► Built and edited pixel-perfect Wordpress pages to client specification
+            </p>
+            <p class="resume-paragraph">
+              ► Created custom, responsive components for multiple sites
+            </p>
+          </div>
+
+          <div class="job-description">
+            <h4>
+              Astro Nautico LLC
+            </h4>
+            <h5 class="job-position">
+              Label Manager/Co-Founder – NY/Philadelphia - 2010-2019
+            </h5>
+            <p class="resume-paragraph">
+              ▸ Managed projects/operations for independent record label
+            </p>
+            <p class="resume-paragraph">
+              ▸ Oversaw 60+ release campaigns from over 40 international artists
+            </p>
+            <p class="resume-paragraph">
+              ▸ Managed Wordpress site, designed and built new site using Three.js
+            </p>
+            <p class="resume-paragraph">
+              ▸ Handled web design, media production, organizational strategy
+            </p>
+          </div>
+        </section>
+
+        <section class="education resume-section">
+          <h3>Education</h3>
+
+          <div class="school-description">
+            <h4>
+              Thinkful
+            </h4>
+            <h5 class="program-title">
+              Software Engineering - Jan-May 2020
+            </h5>
+            <p class="resume-paragraph">
+              ▸ Full-stack software development
+            </p>
+            <p class="resume-paragraph">
+              ▸ JavaScript, React, Node/Express, PostgreSQL
+            </p>
+          </div>
+
+          <div class="school-description">
+            <h4>
+              McGill University
+            </h4>
+            <h5 class="program-title">
+              Bachelor of Arts – Montreal – 2005-2009
+            </h5>
+            <p class="resume-paragraph">
+              ▸ Humanistics/Philosophy
+            </p>
+            <p class="resume-paragraph">
+              ▸ 3.5 GPA, graduated w/ Great Distinction + Dean's List
+            </p>
+          </div>
+        </section>
+
         <section class="resume-projects pagebreak resume-section">
-          <h3>Projects</h3>
+          <h3>Recent Projects</h3>
+
+          <!-- * MICRO LOOPER -->
+
+          <div class="resume-project-info">
+            <h4>
+              Micro Looper
+            </h4>
+
+            <p class="resume-paragraph">
+              Designed and built fully interactive web audio app that allows users to search for samples using the
+              FreeSound API, manipulate it in an FX player (loop, reverse, modify speed/pitch/grain/delay/volume), set
+              loop in/out points, and download the live recording to their computer as a wav file.
+            </p>
+
+            <p class="resume-paragraph">
+              Technologies: <span class="technologies">Svelte, Tone.js, Tailwind, FreeSound API, PostCSS, Vite,
+                Netlify</span>
+            </p>
+            <div class="resume-project-info-links">
+              <a class="resume-link-el" href="https://github.com/wavinginspace/micro-looper" target="_blank">repo</a>
+              <a class="resume-link-el" href="https://microloop.art/" target="_blank">demo</a>
+            </div>
+          </div>
+
+          <!-- * RECLAIM JUSTICE -->
+
+          <div class="resume-project-info">
+            <h4>
+              Reclaim Justice Movement
+            </h4>
+
+            <p class="resume-paragraph">
+              Designed and developed a custom JAMstack site for Reclaim Justice Movement using Gatsby for the front-end
+              and Sanity for the back-end, which allows client to make blog posts and edit page content as they see fit.
+              The site also leverages serverless functions for collecting e-mails and sending automated responses using
+              Sendgrid’s API.
+            </p>
+
+            <p class="resume-paragraph">
+              Technologies: <span class="technologies">React.js, Gatsby, Sanity, GraphQL, Node.js, Styled Components,
+                SendGrid API, Netlify</span>
+            </p>
+            <div class="resume-project-info-links">
+              <a class="resume-link-el" href="https://reclaimjusticemovement.org/" target="_blank">view</a>
+            </div>
+          </div>
+
+          <!-- * ASTRO NAUTICO -->
+
+          <div class="resume-project-info">
+            <h4>
+              Astro Nautico
+            </h4>
+
+            <p class="resume-paragraph">
+              An interactive landing page built with Three.js for independent record label Astro Nautico. Sun position
+              changes based on the user's current time. Site is responsive and accessible.
+            </p>
+
+            <p class="resume-paragraph">
+              Technologies: <span class="technologies">Three.js, Vanilla JS, SCSS, HTML5
+
+              </span>
+            </p>
+            <div class="resume-project-info-links">
+              <a class="resume-link-el" href="https://www.astronauti.co/" target="_blank">demo</a>
+              <a class="resume-link-el" href="https://github.com/wavinginspace/astro-3d" target="_blank">repo</a>
+            </div>
+          </div>
 
           <!-- * CUP OF SUGAR  -->
 
-          <div class="resume-project-info">
+          <!-- <div class="resume-project-info">
             <h4>
               Cup of Sugar
             </h4>
@@ -126,11 +307,11 @@
                 target="_blank">repo</a>
               <a class="resume-link-el" href="https://cup-of-sugar.now.sh/" target="_blank">demo</a>
             </div>
-          </div>
+          </div> -->
 
           <!-- * LANGUAGE TEACHER  -->
 
-          <div class="resume-project-info">
+          <!-- <div class="resume-project-info">
             <h4>
               Language Teacher
             </h4>
@@ -150,7 +331,7 @@
                 target="_blank">repo</a>
               <a class="resume-link-el" href="https://language-teacher.now.sh/register" target="_blank">demo</a>
             </div>
-          </div>
+          </div> -->
 
           <!-- * VIDEO STORE -->
 
@@ -202,155 +383,50 @@
           </div>
         </section> -->
 
-          <section class="skills resume-section">
-            <h3>Skills</h3>
+        </section>
+        <section class="skills resume-section">
+          <h3>Skills</h3>
 
-            <p class="resume-paragraph">
-              </span><span class="skill-title"><span class="emoji">⚡️</span>Front-End:</span>
-              JavaScript, React.js, Gatsby, HTML/CSS, SCSS/SASS, jQuery, Bootstrap, Tailwind, p5.js, D3.js
-            </p>
+          <p class="resume-paragraph">
+            </span><span class="skill-title"><span class="emoji">⚡️</span>Front-End:</span>
+            HTML5, CSS3/SASS, JavaScript, React.js, TypeScript, Svelte, Gatsby, Tailwind, Styled Components, jQuery,
+            Bootstrap, p5.js, Three.js
+          </p>
 
-            <p class="resume-paragraph">
-              <span class="skill-title"><span class="emoji">🔒</span>Back-End:</span>
-              Node.js, Express, PostgreSQL, MongoDB
-            </p>
+          <p class="resume-paragraph">
+            <span class="skill-title"><span class="emoji">🔒</span>Back-End:</span>
+            Node.js, Express, SQL, MongoDB
+          </p>
 
-            <p class="resume-paragraph">
-              <span class="skill-title"><span class="emoji">📊</span>Testing/Deployment:</span>
-              Jest, Enzyme, Mocha, Chai, Cypress, Vercel, Netlify, Heroku
-            </p>
+          <p class="resume-paragraph">
+            <span class="skill-title"><span class="emoji">📊</span>Testing/Deployment:</span>
+            Jest, Enzyme, Mocha, Chai, Cypress, Vercel, Heroku, Netlify
+          </p>
 
-            <p class="resume-paragraph">
-              <span class="skill-title"><span class="emoji">🎨</span>Design:</span>
-              Figma, Sketch, Adobe Suite (XD, Photoshop, Illustrator, Premiere)
-            </p>
+          <p class="resume-paragraph">
+            <span class="skill-title"><span class="emoji">🎨</span>Design:</span>
+            Figma, Sketch, Adobe Suite (XD, Photoshop, Illustrator, Premiere)
+          </p>
 
-            <p class="resume-paragraph">
-              <span class="skill-title"><span class="emoji">🔮</span>Misc:</span>
-              GraphQL, Webpack, Wordpress, Sanity, Git/Github, Parcel, Vite, Babel, Gulp
-            </p>
+          <p class="resume-paragraph">
+            <span class="skill-title"><span class="emoji">🔮</span>Misc:</span>
+            GraphQL, Webpack, Wordpress, Sanity, Git/Github, Parcel, Vite, Babel, Gulp, AJAX
+          </p>
 
-            <p class="resume-paragraph">
-              <span class="skill-title"><span class="emoji">🗂</span>Project Management:</span>
-              Jira, Trello, Asana, Microsoft Office Suite, Google Drive
-            </p>
+          <p class="resume-paragraph">
+            <span class="skill-title"><span class="emoji">🗂</span>Project Management:</span>
+            Notion, Trello, Asana, Microsoft Office Suite, Google Suite
+          </p>
 
-            <p class="resume-paragraph skill last">
-              <span class="skill-title"><span class="emoji">👨‍💻</span>Learning:</span>
-              TypeScript, Next.js, Three.js, Tone.js, Max/MSP
-            </p>
-          </section>
+          <p class="resume-paragraph skill last">
+            <span class="skill-title"><span class="emoji">👨‍💻</span>Learning:</span>
+            Next.js, SvelteKit, Web Audio, Max/MSP
+          </p>
+        </section>
 
-          <section class="education resume-section">
-            <h3>Education</h3>
 
-            <div class="school-description">
-              <h4>
-                Thinkful
-              </h4>
-              <h5 class="program-title">
-                Software Engineering - Jan-May 2020
-              </h5>
-              <p class="resume-paragraph">
-                ▸ Full-stack software development
-              </p>
-              <p class="resume-paragraph">
-                ▸ JavaScript, React, Node/Express, PostgreSQL
-              </p>
-            </div>
 
-            <div class="school-description">
-              <h4>
-                McGill University
-              </h4>
-              <h5 class="program-title">
-                Bachelor of Arts – Montreal – 2005-2009
-              </h5>
-              <p class="resume-paragraph">
-                ▸ Humanistics/Philosophy
-              </p>
-              <p class="resume-paragraph">
-                ▸ 3.5 GPA, graduated w/ Great Distinction + Deans List
-              </p>
-            </div>
-          </section>
 
-          <section class="experience resume-section">
-            <h3>Experience</h3>
-
-            <div class="job-description">
-              <h4>
-                LocalHarvest (Contract)
-              </h4>
-              <h5 class="job-position">
-                UI Developer – Remote - 2020-2021
-              </h5>
-              <p class="resume-paragraph">
-                ► Redesigning and updating 150+ page farm CSA management software built with Java/JSP
-              </p>
-              <p class="resume-paragraph">
-                ► Writing and organizing modular/responsive CSS with SASS/Bootstrap
-              </p>
-              <p class="resume-paragraph">
-                ► Implementing JS scripts for UI interactivity and debugging legacy code
-              </p>
-              <p class="resume-paragraph">
-                ► Cleaning up legacy code and replacing with modern best practices
-              </p>
-            </div>
-
-            <div class="job-description">
-              <h4>
-                wavinginspace
-              </h4>
-              <h5 class="job-position">
-                Freelancer - NY/Philadelphia - 2010-Present
-              </h5>
-              <p class="resume-paragraph">
-                ► Designing and building custom websites and landing pages for clients leveraging CMS platforms and
-                modern best practices
-              </p>
-              <p class="resume-paragraph">
-                ► Designing logos, digital and physical prints, brand style guides, merchandise
-              </p>
-            </div>
-
-            <div class="job-description">
-              <h4>
-                Schubert B2B (Contract)
-              </h4>
-              <h5 class="job-position">
-                Web Developer - Philadelphia/Remote - 2020
-              </h5>
-              <p class="resume-paragraph">
-                ► Building and editing pixel-perfect Wordpress pages to client specification
-              </p>
-              <p class="resume-paragraph">
-                ► Creating custom, responsive components for multiple sites
-              </p>
-            </div>
-
-            <div class="job-description">
-              <h4>
-                Astro Nautico LLC
-              </h4>
-              <h5 class="job-position">
-                Label Manager/Co-Founder – NY/Philadelphia - 2010-2019
-              </h5>
-              <p class="resume-paragraph">
-                ▸ Managed projects/operations for independent record label
-              </p>
-              <p class="resume-paragraph">
-                ▸ Oversaw 60+ release campaigns from over 40 international artists
-              </p>
-              <p class="resume-paragraph">
-                ▸ Handled web design, media production, organizational strategy
-              </p>
-              <p class="resume-paragraph">
-                ▸ Coordinated with artists, managers, venues, contractors, press
-              </p>
-            </div>
-          </section>
       </main>
     </div>
   </div>

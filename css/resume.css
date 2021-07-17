@@ -18,8 +18,14 @@ html.is-animating .transition-fade {
 }
 
 .resume-body {
-  font-family: 'Fira Mono';
+  font-family: 'Fira Mono', Arial, Helvetica, sans-serif;
   overscroll-behavior: none;
+  font-display: block;
+}
+
+.resume-container {
+  max-width: 850px;
+  margin: 0 auto;
 }
 
 .contact-header {
@@ -43,7 +49,6 @@ html.is-animating .transition-fade {
 }
 
 .resume-main {
-  width: 90%;
   padding: 1.5rem;
 }
 
@@ -57,6 +62,7 @@ html.is-animating .transition-fade {
 
 .resume-paragraph {
   font-size: 0.8rem;
+  margin-bottom: 0;
 }
 
 .job-title {
@@ -154,6 +160,10 @@ html.is-animating .transition-fade {
   padding-bottom: 2rem;
 }
 
+section .resume-project-info:last-child .resume-project-info-links {
+  padding-bottom: 0;
+}
+
 .resume-project-info-links a {
   font-size: 0.8rem;
   font-weight: 500;
@@ -208,6 +218,11 @@ html.is-animating .transition-fade {
   line-height: 1.4;
 }
 
+.job-description:last-of-type,
+.school-description:last-of-type {
+  margin-bottom: 0;
+}
+
 .experience h4,
 .education h4,
 h5 {
@@ -224,17 +239,18 @@ h5 {
   margin-bottom: 0;
 }
 
-.print-button {
+.download-button {
   display: none;
 }
 
 @media (min-width: 768px) {
-  .print-button {
+  .download-button {
     display: block;
     position: absolute;
     top: 1rem;
-    right: 2rem;
-    padding: 1rem 3.5rem;
+    letter-spacing: 1.5px;
+    right: 0;
+    padding: 1rem 2.75rem;
     background-color: var(--headerog);
     color: var(--outline);
     font-weight: bold;
@@ -242,14 +258,16 @@ h5 {
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
     border: 2px solid var(--outline);
+    text-decoration: none;
+    text-transform: uppercase;
   }
-  .print-button:hover {
+  .download-button:hover {
     -webkit-box-shadow: 3px 3px rgba(0, 0, 0, 0.5);
             box-shadow: 3px 3px rgba(0, 0, 0, 0.5);
     cursor: pointer;
     color: var(--light);
   }
-  .print-button > p {
+  .download-button > p {
     font-size: 1.2rem;
   }
 }
@@ -348,13 +366,13 @@ h5 {
  --------------------- */
 @media (min-width: 768px) {
   .resume-main {
-    padding: 4rem;
+    padding: 2.75rem 4rem 5rem;
   }
   .resume-header {
     margin-bottom: 3rem;
   }
   .resume-section {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
   }
   .resume-name {
     font-family: 'Fira Mono';
@@ -466,7 +484,7 @@ h5 {
   .skills {
     padding-top: 2.5rem;
   }
-  .print-button {
+  .download-button {
     display: none;
   }
 }
