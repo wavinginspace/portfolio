@@ -187,6 +187,10 @@ section .resume-project-info:last-child .resume-project-info-links {
   font-style: italic;
 }
 
+.skills {
+  position: relative;
+}
+
 .skills h4 {
   font-size: 0.8rem;
   font-weight: 500;
@@ -376,10 +380,6 @@ h5 {
   transition: -webkit-transform 0.5s ease-out;
   transition: transform 0.5s ease-out;
   transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
-}
-
-.skills {
-  position: relative;
 }
 
 /* -------------------

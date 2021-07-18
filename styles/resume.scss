@@ -16,7 +16,6 @@ html.is-animating .transition-fade {
   overscroll-behavior: none;
   font-display: block;
   position: relative;
-  // overflow: hidden;
 }
 
 .resume-container {
@@ -30,22 +29,17 @@ html.is-animating .transition-fade {
   margin: 5rem auto 0.5rem;
   padding: 0 1.5rem;
   position: relative;
-  // max-width: 720px;
 }
 
 .contact-header-underline {
   background: var(--outline);
   width: 100%;
   height: 2px;
-  // padding: 0 1.5rem;
-  // margin: 0 auto 1rem;
 }
 
 @include tabletPortrait {
   .contact-header {
-    // margin: 5rem auto 1rem;
     padding: 0 4rem;
-    // max-width: 720px;
   }
 }
 
@@ -55,7 +49,6 @@ html.is-animating .transition-fade {
 }
 
 .resume-main {
-  // width: 90%;
   padding: 1.5rem;
 }
 
@@ -88,9 +81,6 @@ html.is-animating .transition-fade {
 }
 
 .resume-social-links {
-  // position: absolute;
-  // right: 0;
-  // top: 0.6rem;
   text-align: right;
   flex-direction: row;
 }
@@ -179,6 +169,10 @@ section .resume-project-info:last-child .resume-project-info-links {
 
 .technologies {
   font-style: italic;
+}
+
+.skills {
+  position: relative;
 }
 
 .skills h4 {
@@ -281,8 +275,6 @@ h5 {
   border-bottom: 2px solid var(--outline);
   background-color: var(--nav);
   font-weight: 500;
-  // padding: 0.5rem;
-  // padding-left: 1.5rem;
   transition: background-color 0.2s;
 }
 
@@ -291,7 +283,6 @@ h5 {
 }
 
 .nav-container {
-  // max-width: 850px;
   width: 100%;
   margin: 0 auto;
   padding: 0;
@@ -310,15 +301,11 @@ h5 {
 .mobile-resume-social-links {
   display: flex;
   align-items: center;
-  li {
-    // margin: 0 0.5rem;
-    // font-size: 0.92rem;
-    a {
-      color: var(--outline);
-      transition: color 0.2s;
-      &:hover {
-        color: var(--light);
-      }
+  li a {
+    color: var(--outline);
+    transition: color 0.2s;
+    &:hover {
+      color: var(--light);
     }
   }
 }
@@ -346,11 +333,6 @@ h5 {
   width: 100%;
   padding: 1rem;
   transition: transform 0.5s ease-out;
-}
-
-.skills {
-  position: relative;
-  // overflow: hidden;
 }
 
 /* -------------------
@@ -439,21 +421,13 @@ h5 {
   }
 
   .resume-social-links a {
-    // margin-left: 1.5rem;
     font-weight: bold;
     font-size: 1.25rem;
   }
 
   .resume-navlinks {
     font-size: 1.3rem;
-    // margin-left: 1.5rem;
   }
-
-  // .resume-homelink {
-  //   // padding-left: 2.75rem;
-  //   margin-left: 1.5rem;
-  //   display: inline-block;
-  // }
 
   .mobile-resume-social-links {
     padding-right: 1.5rem;
@@ -534,7 +508,6 @@ h5 {
 
   12% {
     bottom: -1rem;
-    // font-size: 10rem;
   }
 
   25% {
@@ -564,17 +537,5 @@ h5 {
   transform: rotate(-10deg);
   &.move-ghost {
     animation: 6s ease-in-out 2.5s moveGhost infinite both;
-    // font-size: 10rem;
   }
 }
-
-// // * SWUP ANIMATIONS
-
-// .transition-fade {
-//   transition: 0.4s;
-//   opacity: 1;
-// }
-
-// html.is-animating .transition-fade {
-//   opacity: 0;
-// }
