@@ -21,6 +21,7 @@ html.is-animating .transition-fade {
   font-family: 'Fira Mono', Arial, Helvetica, sans-serif;
   overscroll-behavior: none;
   font-display: block;
+  position: relative;
 }
 
 .resume-container {
@@ -34,22 +35,17 @@ html.is-animating .transition-fade {
   margin: 5rem auto 0.5rem;
   padding: 0 1.5rem;
   position: relative;
-  max-width: 720px;
 }
 
 .contact-header-underline {
   background: var(--outline);
   width: 100%;
   height: 2px;
-  padding: 0 1.5rem;
-  margin: 0 auto 1rem;
 }
 
 @media (min-width: 768px) {
   .contact-header {
-    margin: 5rem auto 1rem;
-    padding: 0;
-    max-width: 720px;
+    padding: 0 4rem;
   }
 }
 
@@ -96,9 +92,6 @@ html.is-animating .transition-fade {
 }
 
 .resume-social-links {
-  position: absolute;
-  right: 0;
-  top: 0.6rem;
   text-align: right;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -258,8 +251,8 @@ h5 {
     display: block;
     position: absolute;
     top: 1rem;
+    right: 4rem;
     letter-spacing: 1.5px;
-    right: 0;
     padding: 1rem 2.75rem;
     background-color: var(--headerog);
     color: var(--outline);
@@ -303,15 +296,29 @@ h5 {
   border-bottom: 2px solid var(--outline);
   background-color: var(--nav);
   font-weight: 500;
-  padding: 0.5rem;
-  padding-left: 1.5rem;
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
 }
 
-@media (min-width: 1024px) {
-  .resume-nav {
-    padding: 1.5rem;
+.resume-navlinks {
+  margin-left: 1.5rem;
+}
+
+.nav-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .nav-container {
+    padding: 0 2.5rem;
   }
 }
 
@@ -371,6 +378,10 @@ h5 {
   transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
 }
 
+.skills {
+  position: relative;
+}
+
 /* -------------------
 * ------ LAPTOP ------ 
  --------------------- */
@@ -423,6 +434,10 @@ h5 {
     font-size: 1.5rem;
     padding-bottom: 1.5rem;
   }
+  .job-position,
+  .program-title {
+    font-style: italic;
+  }
   .resume-project-info-links a {
     font-size: 1rem;
   }
@@ -438,15 +453,11 @@ h5 {
     margin: 0 0 0.5rem 0;
   }
   .resume-social-links a {
-    margin-left: 1.5rem;
     font-weight: bold;
     font-size: 1.25rem;
   }
-  .resume-navlinks li a {
+  .resume-navlinks {
     font-size: 1.3rem;
-  }
-  .resume-homelink {
-    padding-left: 2.75rem;
   }
   .mobile-resume-social-links {
     padding-right: 1.5rem;
@@ -473,6 +484,9 @@ h5 {
   .resume-nav,
   .resume-homelink,
   nav > * {
+    display: none;
+  }
+  .ghost {
     display: none;
   }
   .contact-header {
@@ -503,5 +517,63 @@ h5 {
   size: auto;
   margin: 0mm;
   padding: 0;
+}
+
+@-webkit-keyframes moveGhost {
+  0% {
+    bottom: -4rem;
+  }
+  12% {
+    bottom: -1rem;
+  }
+  25% {
+    bottom: -1.5rem;
+  }
+  38% {
+    bottom: -1rem;
+  }
+  50% {
+    bottom: -4rem;
+  }
+  100% {
+    bottom: -4rem;
+  }
+}
+
+@keyframes moveGhost {
+  0% {
+    bottom: -4rem;
+  }
+  12% {
+    bottom: -1rem;
+  }
+  25% {
+    bottom: -1.5rem;
+  }
+  38% {
+    bottom: -1rem;
+  }
+  50% {
+    bottom: -4rem;
+  }
+  100% {
+    bottom: -4rem;
+  }
+}
+
+.ghost {
+  display: block;
+  position: fixed;
+  font-size: 4rem;
+  bottom: -4rem;
+  right: 4rem;
+  cursor: default;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}
+
+.ghost.move-ghost {
+  -webkit-animation: 6s ease-in-out 2.5s moveGhost infinite both;
+          animation: 6s ease-in-out 2.5s moveGhost infinite both;
 }
 /*# sourceMappingURL=resume.css.map */
