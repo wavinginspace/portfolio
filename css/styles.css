@@ -1283,7 +1283,7 @@ body {
   overflow: overlay;
 }
 
-/* TODO - decide if keep or delete gradient scroll */
+/* TODO -- decide if keep or delete gradient scroll */
 
 /* body::-webkit-scrollbar {
   background: black;
