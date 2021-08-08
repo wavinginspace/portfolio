@@ -1283,7 +1283,9 @@ body {
   overflow: overlay;
 }
 
-body::-webkit-scrollbar {
+/* TODO - decide if keep or delete gradient scroll */
+
+/* body::-webkit-scrollbar {
   background: black;
   width: 8px;
 }
@@ -1296,7 +1298,7 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--light);
   -webkit-box-shadow: 0 -100vh 60px 100vh var(--light);
           box-shadow: 0 -100vh 60px 100vh var(--light);
-}
+} */
 
 .transition-fade {
   -webkit-transition: 0.4s;
